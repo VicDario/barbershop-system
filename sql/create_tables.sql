@@ -65,7 +65,7 @@ CREATE TABLE certificates_employees (
     FOREIGN KEY (rut_employee) REFERENCES employees(rut)
 );
 
-CREATE TABLE service_ (
+CREATE TABLE service (
     code INTEGER PRIMARY KEY NOT NULL,
     name VARCHAR(20) NOT NULL,
     base_price FLOAT NOT NULL
@@ -73,11 +73,11 @@ CREATE TABLE service_ (
 
 CREATE TABLE make (
     rut_employee VARCHAR(15) NOT NULL,
-    code_service INTEGER NOT NULL,
+    service_code INTEGER NOT NULL,
     is_expert VARCHAR(60) NOT NULL,
-    PRIMARY KEY (rut_employee, code_service),
+    PRIMARY KEY (rut_employee, service_code),
     FOREIGN KEY (rut_employee) REFERENCES employees(rut),
-    FOREIGN KEY (code_service) REFERENCES service_(code)
+    FOREIGN KEY (service_code) REFERENCES service_(code)
 );
 
 CREATE TABLE combo (
@@ -87,14 +87,14 @@ CREATE TABLE combo (
 
 CREATE TABLE offer_in (
     number_combo INTEGER NOT NULL,
-    code_service INTEGER NOT NULL,
-    PRIMARY KEY(number_combo, code_service),
+    service_code INTEGER NOT NULL,
+    PRIMARY KEY(number_combo, service_code),
     FOREIGN KEY (number_combo) REFERENCES combo(number),
-    FOREIGN KEY (code_service) REFERENCES service_(codigo)
+    FOREIGN KEY (service_code) REFERENCES service_(codigo)
 );
 
 CREATE TABLE client (
-    rut    VARCHAR(15) PRIMARY KEY,
+    rut VARCHAR(15) PRIMARY KEY,
     name_client VARCHAR(20) NOT NULL,
     surname VARCHAR(20) NOT NULL,
     street VARCHAR(20) NOT NULL,
@@ -107,22 +107,22 @@ CREATE TABLE client (
     complexity INTEGER NOT NULL
 );
 
-CREATE TABLE valuation (  
-    code_service INTEGER NOT NULL,
-    rut_client VARCHAR(15)NOT NULL,
+CREATE TABLE review (  
+    service_code INTEGER NOT NULL,
+    client_rut VARCHAR(15)NOT NULL,
     score INTEGER NOT NULL,
     review INTEGER NOT NULL,
     date INTEGER NOT NULL,
-    PRIMARY KEY (code_service, rut_client),
-    FOREIGN KEY (code_service) REFERENCES service_(code),
-    FOREIGN KEY (rut_client) REFERENCES client(rut)
+    PRIMARY KEY (service_code, client_rut),
+    FOREIGN KEY (service_code) REFERENCES service_(code),
+    FOREIGN KEY (client_rut) REFERENCES client(rut)
 );
 
 CREATE TABLE phones_client (
-    rut_client VARCHAR(15) NOT NULL,
+    client_rut VARCHAR(15) NOT NULL,
     phone VARCHAR(12) NOT NULL,
-    PRIMARY KEY (rut_client), 
-    FOREIGN KEY (rut_client) REFERENCES client(rut) 
+    PRIMARY KEY (client_rut), 
+    FOREIGN KEY (client_rut) REFERENCES client(rut) 
 );
     
 CREATE TABLE sales_voucher (
@@ -130,8 +130,8 @@ CREATE TABLE sales_voucher (
     day INTEGER NOT NULL,
     month INTEGER NOT NULL,
     year INTEGER NOT NULL,
-    rut_client VARCHAR(15) NOT NULL,
-    FOREIGN KEY (rut_client) REFERENCES client(rut)
+    client_rut VARCHAR(15) NOT NULL,
+    FOREIGN KEY (client_rut) REFERENCES client(rut)
 );
 
 CREATE TABLE product (
@@ -160,21 +160,21 @@ CREATE TABLE sell (
     FOREIGN KEY (code_product) REFERENCES product(code)
 );
 
-CREATE TABLE reserve(
+CREATE TABLE booking(
     code INTEGER PRIMARY KEY,
-    day    INTEGER NOT NULL,
+    day INTEGER NOT NULL,
     month INTEGER NOT NULL,
     year INTEGER NOT NULL,
     hour INTEGER NOT NULL,
     state VARCHAR(50) NOT NULL,
-    rut_client VARCHAR(15) NOT NULL,
-    FOREIGN KEY (rut_client) REFERENCES client(rut)
+    client_rut VARCHAR(15) NOT NULL,
+    FOREIGN KEY (client_rut) REFERENCES client(rut)
 );
 
 CREATE TABLE payment_document(
     number_document INTEGER PRIMARY KEY NOT NULL,
-    code_reserve INTEGER UNIQUE,
-    FOREIGN KEY (code_reserve) REFERENCES reserve(code)
+    booking_code INTEGER UNIQUE,
+    FOREIGN KEY (booking_code) REFERENCES booking(code)
 );
 
 CREATE TABLE discounts_codes(
