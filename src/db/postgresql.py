@@ -4,8 +4,6 @@ from dataclasses import dataclass
 from typing import Any, Generator, List, Optional
 import psycopg
 from psycopg.rows import dict_row
-from dependency_injector.wiring import inject, Provide
-from src.container import Container
 
 @dataclass
 class DatabaseConfig:
@@ -45,7 +43,7 @@ class DatabaseInterface(ABC):
         pass
 
 class PostgresDatabase(DatabaseInterface):
-    def __init__(self, config: DatabaseConfig = Provide[Container.db_config]):
+    def __init__(self, config: DatabaseConfig):
         self.config = config
         self._conn = None
     

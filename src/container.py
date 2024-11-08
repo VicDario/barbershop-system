@@ -1,5 +1,7 @@
 from os import getenv
 from dependency_injector import containers, providers
+
+from .infrastructure.repositories.shop_repository import ShopRepository
 from .db.postgresql import DatabaseConfig, PostgresDatabase
 from dotenv import load_dotenv
 
@@ -16,4 +18,6 @@ class Container(containers.DeclarativeContainer):
         password = getenv("DB_PASSWORD")
     )
 
-    postgre_database = providers.Singleton(PostgresDatabase)
+    postgre_database = providers.Singleton(PostgresDatabase, config=db_config)
+
+    shop_repository = providers.Singleton(ShopRepository, db=postgre_database)
