@@ -1,0 +1,2 @@
+class GenerateChartUseCase:
+    pass

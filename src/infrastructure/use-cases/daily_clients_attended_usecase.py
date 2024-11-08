@@ -1,0 +1,2 @@
+class DailyClientsAttendedUseCase:
+    pass

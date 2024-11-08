@@ -1,0 +1,2 @@
+class LastYearIncomesUseCase:
+    pass
