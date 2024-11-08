@@ -1,0 +1,193 @@
+CREATE TABLE shop (
+    id INTEGER PRIMARY KEY NOT NULL,
+    name VARCHAR(20) NOT NULL,
+    street VARCHAR(20) NOT NULL,
+    street_number INTEGER NOT NULL,
+    community VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE phone_shop (
+    shop_id INTEGER NOT NULL,
+    phone VARCHAR(12) NOT NULL,
+    PRIMARY KEY (shop_id),
+    FOREIGN KEY (shop_id) REFERENCES shop(id)
+);
+
+CREATE TABLE rrss_shop (
+    shop_id INTEGER NOT NULL,
+    name VARCHAR(20) NOT NULL,
+    user VARCHAR(20) NOT NULL,
+    PRIMARY KEY (shop_id),
+    FOREIGN KEY (shop_id) REFERENCES shop(id)
+);
+
+CREATE TABLE schedule_shop (
+    shop_id INTEGER NOT NULL,
+    week_day VARCHAR(20) NOT NULL,
+    start_time VARCHAR(20) NOT NULL,
+    end_time VARCHAR(20) NOT NULL,
+    PRIMARY KEY (shop_id),
+    FOREIGN KEY (shop_id) REFERENCES shop(id)
+);
+
+CREATE TABLE employees (
+    rut    VARCHAR(15) PRIMARY KEY NOT NULL,
+    name VARCHAR(20) NOT NULL,
+    surname_employee VARCHAR(20) NOT NULL,
+    picture VARCHAR(40) NOT NULL,
+    description_employee  VARCHAR(200) NOT NULL,
+    salary FLOAT NOT NULL,
+    type_employee INTEGER NOT NULL,
+    start_activities INTEGER NOT NULL,
+    category VARCHAR(20) NOT NULL
+); 
+
+CREATE TABLE schedule_employees (
+    rut_employee VARCHAR(15) NOT NULL,
+    week_date VARCHAR(15) NOT NULL,
+    start_time INTEGER NOT NULL,
+    end_time INTEGER NOT null,
+    PRIMARY KEY (rut_employee),
+    FOREIGN KEY (rut_employee) REFERENCES employees(rut)
+);
+
+CREATE TABLE skills_receptionist(
+    rut_employee VARCHAR(15) NOT NULL,
+    skills VARCHAR(50) NOT NULL,
+    PRIMARY KEY (rut_employee),
+    FOREIGN KEY (rut_employee) REFERENCES employees(rut)
+);
+
+CREATE TABLE certificates_employees (
+    rut_employee VARCHAR(15) NOT NULL,
+    certificates INTEGER NOT NULL,
+    PRIMARY KEY (rut_employee),
+    FOREIGN KEY (rut_employee) REFERENCES employees(rut)
+);
+
+CREATE TABLE service_ (
+    code INTEGER PRIMARY KEY NOT NULL,
+    name VARCHAR(20) NOT NULL,
+    base_price FLOAT NOT NULL
+);
+
+CREATE TABLE make (
+    rut_employee VARCHAR(15) NOT NULL,
+    code_service INTEGER NOT NULL,
+    is_expert VARCHAR(60) NOT NULL,
+    PRIMARY KEY (rut_employee, code_service),
+    FOREIGN KEY (rut_employee) REFERENCES employees(rut),
+    FOREIGN KEY (code_service) REFERENCES service_(code)
+);
+
+CREATE TABLE combo (
+    number INTEGER PRIMARY KEY,
+    combo_price FLOAT NOT NULL
+);
+
+CREATE TABLE offer_in (
+    number_combo INTEGER NOT NULL,
+    code_service INTEGER NOT NULL,
+    PRIMARY KEY(number_combo, code_service),
+    FOREIGN KEY (number_combo) REFERENCES combo(number),
+    FOREIGN KEY (code_service) REFERENCES service_(codigo)
+);
+
+CREATE TABLE client (
+    rut    VARCHAR(15) PRIMARY KEY,
+    name_client VARCHAR(20) NOT NULL,
+    surname VARCHAR(20) NOT NULL,
+    street VARCHAR(20) NOT NULL,
+    street_number INTEGER NOT NULL,
+    community VARCHAR(20) NOT NULL,
+    day INTEGER NOT NULL,
+    month INTEGER NOT NULL,
+    year INTEGER NOT NULL,
+    email VARCHAR(60) NOT NULL,
+    complexity INTEGER NOT NULL
+);
+
+CREATE TABLE valuation (  
+    code_service INTEGER NOT NULL,
+    rut_client VARCHAR(15)NOT NULL,
+    score INTEGER NOT NULL,
+    review INTEGER NOT NULL,
+    date INTEGER NOT NULL,
+    PRIMARY KEY (code_service, rut_client),
+    FOREIGN KEY (code_service) REFERENCES service_(code),
+    FOREIGN KEY (rut_client) REFERENCES client(rut)
+);
+
+CREATE TABLE phones_client (
+    rut_client VARCHAR(15) NOT NULL,
+    phone VARCHAR(12) NOT NULL,
+    PRIMARY KEY (rut_client), 
+    FOREIGN KEY (rut_client) REFERENCES client(rut) 
+);
+    
+CREATE TABLE sales_voucher (
+    number_voucher INTEGER PRIMARY KEY NOT NULL,
+    day INTEGER NOT NULL,
+    month INTEGER NOT NULL,
+    year INTEGER NOT NULL,
+    rut_client VARCHAR(15) NOT NULL,
+    FOREIGN KEY (rut_client) REFERENCES client(rut)
+);
+
+CREATE TABLE product (
+    code INTEGER PRIMARY KEY NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    price FLOAT NOT NULL,
+    description VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE sales_in (
+    number_voucher INTEGER NOT NULL,
+    code_product INTEGER NOT NULL,
+    number INTEGER NOT NULL,
+    discount FLOAT NOT NULL,
+    PRIMARY KEY (number_voucher, code_product),
+    FOREIGN KEY (number_voucher) REFERENCES sales_voucher(number_voucher),
+    FOREIGN KEY (code_product) REFERENCES product(code)
+);
+
+CREATE TABLE sell (
+    shop_id INTEGER NOT NULL,
+    code_product INTEGER NOT NULL,
+    stock INTEGER NOT NULL,
+    PRIMARY KEY (shop_id, code_product),
+    FOREIGN KEY (shop_id) REFERENCES shop(id),
+    FOREIGN KEY (code_product) REFERENCES product(code)
+);
+
+CREATE TABLE reserve(
+    code INTEGER PRIMARY KEY,
+    day    INTEGER NOT NULL,
+    month INTEGER NOT NULL,
+    year INTEGER NOT NULL,
+    hour INTEGER NOT NULL,
+    state VARCHAR(50) NOT NULL,
+    rut_client VARCHAR(15) NOT NULL,
+    FOREIGN KEY (rut_client) REFERENCES client(rut)
+);
+
+CREATE TABLE payment_document(
+    number_document INTEGER PRIMARY KEY NOT NULL,
+    code_reserve INTEGER UNIQUE,
+    FOREIGN KEY (code_reserve) REFERENCES reserve(code)
+);
+
+CREATE TABLE discounts_codes(
+    code INTEGER PRIMARY KEY NOT NULL,
+    percentage FLOAT NOT NULL,
+    caducity_date VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE discount (
+    code_discount INTEGER NOT NULL,
+    number_payment_document INTEGER NOT NULL,
+    mount FLOAT NOT NULL,
+    PRIMARY KEY (code_discount, number_payment_document),
+    FOREIGN KEY (code_discount) REFERENCES discounts_codes(code),
+    FOREIGN KEY (number_payment_document) REFERENCES payment_document(number_document)
+);
