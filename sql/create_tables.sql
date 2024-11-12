@@ -77,7 +77,7 @@ CREATE TABLE make (
     is_expert VARCHAR(60) NOT NULL,
     PRIMARY KEY (rut_employee, service_code),
     FOREIGN KEY (rut_employee) REFERENCES employees(rut),
-    FOREIGN KEY (service_code) REFERENCES service_(code)
+    FOREIGN KEY (service_code) REFERENCES service(code)
 );
 
 CREATE TABLE combo (
@@ -90,19 +90,17 @@ CREATE TABLE offer_in (
     service_code INTEGER NOT NULL,
     PRIMARY KEY(number_combo, service_code),
     FOREIGN KEY (number_combo) REFERENCES combo(number),
-    FOREIGN KEY (service_code) REFERENCES service_(codigo)
+    FOREIGN KEY (service_code) REFERENCES service(code)
 );
 
 CREATE TABLE client (
     rut VARCHAR(15) PRIMARY KEY,
-    name_client VARCHAR(20) NOT NULL,
+    name VARCHAR(20) NOT NULL,
     surname VARCHAR(20) NOT NULL,
     street VARCHAR(20) NOT NULL,
     street_number INTEGER NOT NULL,
     community VARCHAR(20) NOT NULL,
-    day INTEGER NOT NULL,
-    month INTEGER NOT NULL,
-    year INTEGER NOT NULL,
+    birthdate DATE NOT NULL,
     email VARCHAR(60) NOT NULL,
     complexity INTEGER NOT NULL
 );
@@ -112,9 +110,9 @@ CREATE TABLE review (
     client_rut VARCHAR(15)NOT NULL,
     score INTEGER NOT NULL,
     review INTEGER NOT NULL,
-    date INTEGER NOT NULL,
+    date DATE NOT NULL,
     PRIMARY KEY (service_code, client_rut),
-    FOREIGN KEY (service_code) REFERENCES service_(code),
+    FOREIGN KEY (service_code) REFERENCES service(code),
     FOREIGN KEY (client_rut) REFERENCES client(rut)
 );
 
@@ -162,10 +160,7 @@ CREATE TABLE sell (
 
 CREATE TABLE booking(
     code INTEGER PRIMARY KEY,
-    day INTEGER NOT NULL,
-    month INTEGER NOT NULL,
-    year INTEGER NOT NULL,
-    hour INTEGER NOT NULL,
+    date TIMESTAMP NOT NULL,
     state VARCHAR(50) NOT NULL,
     client_rut VARCHAR(15) NOT NULL,
     FOREIGN KEY (client_rut) REFERENCES client(rut)
