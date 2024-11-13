@@ -24,14 +24,14 @@ CREATE TABLE rrss_shop (
 CREATE TABLE schedule_shop (
     shop_id INTEGER NOT NULL,
     week_day VARCHAR(20) NOT NULL,
-    start_time VARCHAR(20) NOT NULL,
-    end_time VARCHAR(20) NOT NULL,
+    start_time TIME NOT NULL,
+    end_time TIME NOT NULL,
     PRIMARY KEY (shop_id),
     FOREIGN KEY (shop_id) REFERENCES shop(id)
 );
 
 CREATE TABLE employees (
-    rut    VARCHAR(15) PRIMARY KEY NOT NULL,
+    rut VARCHAR(15) PRIMARY KEY NOT NULL,
     name VARCHAR(20) NOT NULL,
     surname_employee VARCHAR(20) NOT NULL,
     picture VARCHAR(40) NOT NULL,
@@ -45,8 +45,8 @@ CREATE TABLE employees (
 CREATE TABLE schedule_employees (
     rut_employee VARCHAR(15) NOT NULL,
     week_date VARCHAR(15) NOT NULL,
-    start_time INTEGER NOT NULL,
-    end_time INTEGER NOT null,
+    start_time TIME NOT NULL,
+    end_time TIME NOT null,
     PRIMARY KEY (rut_employee),
     FOREIGN KEY (rut_employee) REFERENCES employees(rut)
 );
@@ -60,7 +60,7 @@ CREATE TABLE skills_receptionist(
 
 CREATE TABLE certificates_employees (
     rut_employee VARCHAR(15) NOT NULL,
-    certificates INTEGER NOT NULL,
+    certificates VARCHAR(50) NOT NULL,
     PRIMARY KEY (rut_employee),
     FOREIGN KEY (rut_employee) REFERENCES employees(rut)
 );
@@ -81,15 +81,15 @@ CREATE TABLE make (
 );
 
 CREATE TABLE combo (
-    number INTEGER PRIMARY KEY,
+    combo_number INTEGER PRIMARY KEY,
     combo_price FLOAT NOT NULL
 );
 
 CREATE TABLE offer_in (
-    number_combo INTEGER NOT NULL,
+    combo_number INTEGER NOT NULL,
     service_code INTEGER NOT NULL,
-    PRIMARY KEY(number_combo, service_code),
-    FOREIGN KEY (number_combo) REFERENCES combo(number),
+    PRIMARY KEY(combo_number, service_code),
+    FOREIGN KEY (combo_number) REFERENCES combo(number),
     FOREIGN KEY (service_code) REFERENCES service(code)
 );
 
@@ -109,7 +109,7 @@ CREATE TABLE review (
     service_code INTEGER NOT NULL,
     client_rut VARCHAR(15)NOT NULL,
     score INTEGER NOT NULL,
-    review INTEGER NOT NULL,
+    review VARCHAR(255) NOT NULL,
     date DATE NOT NULL,
     PRIMARY KEY (service_code, client_rut),
     FOREIGN KEY (service_code) REFERENCES service(code),
