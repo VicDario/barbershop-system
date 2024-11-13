@@ -16,7 +16,7 @@ CREATE TABLE phone_shop (
 CREATE TABLE rrss_shop (
     shop_id INTEGER NOT NULL,
     name VARCHAR(20) NOT NULL,
-    user VARCHAR(20) NOT NULL,
+    username VARCHAR(20) NOT NULL,
     PRIMARY KEY (shop_id),
     FOREIGN KEY (shop_id) REFERENCES shop(id)
 );
@@ -82,14 +82,14 @@ CREATE TABLE make (
 
 CREATE TABLE combo (
     combo_number INTEGER PRIMARY KEY,
-    combo_price FLOAT NOT NULL
+    price INTEGER NOT NULL
 );
 
 CREATE TABLE offer_in (
     combo_number INTEGER NOT NULL,
     service_code INTEGER NOT NULL,
     PRIMARY KEY(combo_number, service_code),
-    FOREIGN KEY (combo_number) REFERENCES combo(number),
+    FOREIGN KEY (combo_number) REFERENCES combo(combo_number),
     FOREIGN KEY (service_code) REFERENCES service(code)
 );
 
