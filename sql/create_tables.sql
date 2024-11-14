@@ -127,9 +127,7 @@ CREATE TABLE phones_client (
     
 CREATE TABLE sales_voucher (
     number_voucher INTEGER PRIMARY KEY NOT NULL,
-    day INTEGER NOT NULL,
-    month INTEGER NOT NULL,
-    year INTEGER NOT NULL,
+    date DATE NOT NULL, 
     client_rut VARCHAR(15) NOT NULL,
     shop_id INTEGER NOT NULL,
     FOREIGN KEY (client_rut) REFERENCES client(rut),
