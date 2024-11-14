@@ -169,7 +169,7 @@ CREATE TABLE booking (
 );
 
 CREATE TABLE payment_document (
-    number_document INTEGER PRIMARY KEY NOT NULL,
+    document_number INTEGER PRIMARY KEY NOT NULL,
     booking_code INTEGER UNIQUE,
     FOREIGN KEY (booking_code) REFERENCES booking(code)
 );
@@ -182,9 +182,9 @@ CREATE TABLE discounts_codes (
 
 CREATE TABLE discount (
     code_discount INTEGER NOT NULL,
-    number_payment_document INTEGER NOT NULL,
-    mount FLOAT NOT NULL,
-    PRIMARY KEY (code_discount, number_payment_document),
+    payment_document_number INTEGER NOT NULL,
+    mount INTEGER NOT NULL,
+    PRIMARY KEY (code_discount, payment_document_number),
     FOREIGN KEY (code_discount) REFERENCES discounts_codes(code),
-    FOREIGN KEY (number_payment_document) REFERENCES payment_document(number_document)
+    FOREIGN KEY (payment_document_number) REFERENCES payment_document(document_number)
 );
