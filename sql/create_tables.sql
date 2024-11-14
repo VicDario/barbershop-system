@@ -9,7 +9,6 @@ CREATE TABLE shops (
 CREATE TABLE phone_shop (
     shop_id INTEGER NOT NULL,
     phone VARCHAR(12) NOT NULL,
-    PRIMARY KEY (shop_id),
     FOREIGN KEY (shop_id) REFERENCES shops(id)
 );
 
@@ -17,7 +16,6 @@ CREATE TABLE rrss_shop (
     shop_id INTEGER NOT NULL,
     name VARCHAR(20) NOT NULL,
     username VARCHAR(20) NOT NULL,
-    PRIMARY KEY (shop_id),
     FOREIGN KEY (shop_id) REFERENCES shops(id)
 );
 
@@ -26,7 +24,6 @@ CREATE TABLE schedule_shop (
     week_day VARCHAR(20) NOT NULL,
     start_time TIME NOT NULL,
     end_time TIME NOT NULL,
-    PRIMARY KEY (shop_id),
     FOREIGN KEY (shop_id) REFERENCES shops(id)
 );
 
@@ -49,21 +46,18 @@ CREATE TABLE schedule_employees (
     week_date VARCHAR(15) NOT NULL,
     start_time TIME NOT NULL,
     end_time TIME NOT null,
-    PRIMARY KEY (employee_rut),
     FOREIGN KEY (employee_rut) REFERENCES employees(rut)
 );
 
 CREATE TABLE skills_receptionist(
     employee_rut VARCHAR(15) NOT NULL,
     skill VARCHAR(50) NOT NULL,
-    PRIMARY KEY (employee_rut),
     FOREIGN KEY (employee_rut) REFERENCES employees(rut)
 );
 
 CREATE TABLE certificates_employees (
     employee_rut VARCHAR(15) NOT NULL,
     certificates VARCHAR(50) NOT NULL,
-    PRIMARY KEY (employee_rut),
     FOREIGN KEY (employee_rut) REFERENCES employees(rut)
 );
 
@@ -121,7 +115,6 @@ CREATE TABLE review (
 CREATE TABLE phones_client (
     client_rut VARCHAR(15) NOT NULL,
     phone VARCHAR(12) NOT NULL,
-    PRIMARY KEY (client_rut), 
     FOREIGN KEY (client_rut) REFERENCES client(rut) 
 );
     
