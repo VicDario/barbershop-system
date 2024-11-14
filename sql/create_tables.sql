@@ -43,7 +43,7 @@ CREATE TABLE employees (
 
 CREATE TABLE schedule_employees (
     employee_rut VARCHAR(15) NOT NULL,
-    week_date VARCHAR(15) NOT NULL,
+    week_day VARCHAR(15) NOT NULL,
     start_time TIME NOT NULL,
     end_time TIME NOT null,
     FOREIGN KEY (employee_rut) REFERENCES employees(rut)
