@@ -1,4 +1,4 @@
-CREATE TABLE shop (
+CREATE TABLE shops (
     id INTEGER PRIMARY KEY NOT NULL,
     name VARCHAR(20) NOT NULL,
     street VARCHAR(25) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE phone_shop (
     shop_id INTEGER NOT NULL,
     phone VARCHAR(12) NOT NULL,
     PRIMARY KEY (shop_id),
-    FOREIGN KEY (shop_id) REFERENCES shop(id)
+    FOREIGN KEY (shop_id) REFERENCES shops(id)
 );
 
 CREATE TABLE rrss_shop (
@@ -18,7 +18,7 @@ CREATE TABLE rrss_shop (
     name VARCHAR(20) NOT NULL,
     username VARCHAR(20) NOT NULL,
     PRIMARY KEY (shop_id),
-    FOREIGN KEY (shop_id) REFERENCES shop(id)
+    FOREIGN KEY (shop_id) REFERENCES shops(id)
 );
 
 CREATE TABLE schedule_shop (
@@ -27,7 +27,7 @@ CREATE TABLE schedule_shop (
     start_time TIME NOT NULL,
     end_time TIME NOT NULL,
     PRIMARY KEY (shop_id),
-    FOREIGN KEY (shop_id) REFERENCES shop(id)
+    FOREIGN KEY (shop_id) REFERENCES shops(id)
 );
 
 CREATE TABLE employees (
@@ -41,7 +41,7 @@ CREATE TABLE employees (
     start_activities DATE NOT NULL,
     category VARCHAR(20) NOT NULL,
     shop_id INTEGER NOT NULL,
-    FOREIGN KEY (shop_id) REFERENCES shop(id)
+    FOREIGN KEY (shop_id) REFERENCES shops(id)
 ); 
 
 CREATE TABLE schedule_employees (
@@ -133,7 +133,7 @@ CREATE TABLE sales_voucher (
     client_rut VARCHAR(15) NOT NULL,
     shop_id INTEGER NOT NULL,
     FOREIGN KEY (client_rut) REFERENCES client(rut),
-    FOREIGN KEY (shop_id) REFERENCES shop(id)
+    FOREIGN KEY (shop_id) REFERENCES shops(id)
 );
 
 CREATE TABLE product (
@@ -158,7 +158,7 @@ CREATE TABLE sell (
     code_product INTEGER NOT NULL,
     stock INTEGER NOT NULL CONSTRAINT valid_stock CHECK (stock >= 0),
     PRIMARY KEY (shop_id, code_product),
-    FOREIGN KEY (shop_id) REFERENCES shop(id),
+    FOREIGN KEY (shop_id) REFERENCES shops(id),
     FOREIGN KEY (code_product) REFERENCES product(code)
 );
 
