@@ -39,7 +39,9 @@ CREATE TABLE employees (
     salary INTEGER NOT NULL,
     employee_type INTEGER NOT NULL,
     start_activities DATE NOT NULL,
-    category VARCHAR(20) NOT NULL
+    category VARCHAR(20) NOT NULL,
+    shop_id INTEGER NOT NULL,
+    FOREIGN KEY (shop_id) REFERENCES shop(id)
 ); 
 
 CREATE TABLE schedule_employees (
