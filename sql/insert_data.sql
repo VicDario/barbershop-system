@@ -146,5 +146,5 @@ INSERT INTO discounts_codes(code, percentage, expiration_date) VALUES (3, 0.25, 
 INSERT INTO discounts_codes(code, percentage, expiration_date) VALUES (4, 0.05, '2025-03-01');
 INSERT INTO discounts_codes(code, percentage, expiration_date) VALUES (5, 0.15, '2024-12-03');
 
-INSERT INTO discount(code_discount, number_payment_document, mount) VALUES (1, 1, 1000);
-INSERT INTO discount(code_discount, number_payment_document, mount) VALUES (2, 2, 2000);
+INSERT INTO discount(code_discount, payment_document_number, mount) VALUES (1, 1, 1000);
+INSERT INTO discount(code_discount, payment_document_number, mount) VALUES (2, 2, 2000);
