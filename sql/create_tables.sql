@@ -31,7 +31,7 @@ CREATE TABLE employees (
     rut VARCHAR(15) PRIMARY KEY NOT NULL,
     name VARCHAR(20) NOT NULL,
     surname VARCHAR(20) NOT NULL,
-    picture VARCHAR(40),
+    picture VARCHAR(100),
     description VARCHAR(200),
     salary INTEGER NOT NULL,
     employee_type INTEGER NOT NULL,
