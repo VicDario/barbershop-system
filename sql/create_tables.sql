@@ -136,21 +136,21 @@ CREATE TABLE product (
 
 CREATE TABLE sales_in (
     number_voucher INTEGER NOT NULL,
-    code_product INTEGER NOT NULL,
+    product_code INTEGER NOT NULL,
     number INTEGER NOT NULL,
     discount INTEGER NOT NULL,
-    PRIMARY KEY (number_voucher, code_product),
+    PRIMARY KEY (number_voucher, product_code),
     FOREIGN KEY (number_voucher) REFERENCES sales_voucher(number_voucher),
-    FOREIGN KEY (code_product) REFERENCES product(code)
+    FOREIGN KEY (product_code) REFERENCES product(code)
 );
 
 CREATE TABLE sell (
     shop_id INTEGER NOT NULL,
-    code_product INTEGER NOT NULL,
+    product_code INTEGER NOT NULL,
     stock INTEGER NOT NULL CONSTRAINT valid_stock CHECK (stock >= 0),
-    PRIMARY KEY (shop_id, code_product),
+    PRIMARY KEY (shop_id, product_code),
     FOREIGN KEY (shop_id) REFERENCES shops(id),
-    FOREIGN KEY (code_product) REFERENCES product(code)
+    FOREIGN KEY (product_code) REFERENCES product(code)
 );
 
 CREATE TABLE booking (
