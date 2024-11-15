@@ -163,6 +163,16 @@ CREATE TABLE bookings (
     FOREIGN KEY (shop_id) REFERENCES shops(id)
 );
 
+CREATE TABLE attends (
+    booking_code INTEGER NOT NULL,
+    service_code INTEGER NOT NULL,
+    employee_rut VARCHAR(15) NOT NULL,
+    PRIMARY KEY (booking_code, service_code),
+    FOREIGN KEY (booking_code) REFERENCES bookings(code),
+    FOREIGN KEY (service_code) REFERENCES services(code),
+    FOREIGN KEY (employee_rut) REFERENCES employees(rut)
+);
+
 CREATE TABLE payment_documents (
     document_number INTEGER PRIMARY KEY NOT NULL,
     booking_code INTEGER UNIQUE,
