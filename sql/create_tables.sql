@@ -158,7 +158,9 @@ CREATE TABLE booking (
     date TIMESTAMP NOT NULL,
     status VARCHAR(12) NOT NULL,
     client_rut VARCHAR(15) NOT NULL,
-    FOREIGN KEY (client_rut) REFERENCES client(rut)
+    shop_id INTEGER NOT NULL,
+    FOREIGN KEY (client_rut) REFERENCES client(rut),
+    FOREIGN KEY (shop_id) REFERENCES shop(id)
 );
 
 CREATE TABLE payment_document (
