@@ -57,7 +57,7 @@ CREATE TABLE skills_receptionist(
 
 CREATE TABLE certificates_employees (
     employee_rut VARCHAR(15) NOT NULL,
-    certificates VARCHAR(50) NOT NULL,
+    certificate VARCHAR(100) NOT NULL,
     FOREIGN KEY (employee_rut) REFERENCES employees(rut)
 );
 
