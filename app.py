@@ -4,6 +4,5 @@ from src.container import Container
 container = Container()
 container.wire(modules=[__name__])
 
-shop_repo = container.shop_repository()
-result = shop_repo.get_by_id(5200)
-print(result)
+usecase = container.lastyear_profits_usecase()
+result = usecase.execute()
