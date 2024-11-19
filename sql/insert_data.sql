@@ -4,12 +4,12 @@ INSERT INTO shops (id, name, street, street_number, community) VALUES (5400, 'PL
 INSERT INTO shops (id, name, street, street_number, community) VALUES (5600, 'FJ BARBER SHOP', 'MARACAIBO', 993, 'Santiago');
 INSERT INTO shops (id, name, street, street_number, community) VALUES (5800, 'MA STYLES SHOP', 'CLAUDIO ARRAY', 421, 'Santiago');
 
-INSERT INTO phone_shops (shop_id, phone) VALUES (5100, '964537263');
-INSERT INTO phone_shops (shop_id, phone) VALUES (5100, '939431233');
-INSERT INTO phone_shops (shop_id, phone) VALUES (5200, '962498726');
-INSERT INTO phone_shops (shop_id, phone) VALUES (5400, '921013094');
-INSERT INTO phone_shops (shop_id, phone) VALUES (5600, '978960939');
-INSERT INTO phone_shops (shop_id, phone) VALUES (5800, '923948241');
+INSERT INTO phones_shops (shop_id, phone) VALUES (5100, '964537263');
+INSERT INTO phones_shops (shop_id, phone) VALUES (5100, '939431233');
+INSERT INTO phones_shops (shop_id, phone) VALUES (5200, '962498726');
+INSERT INTO phones_shops (shop_id, phone) VALUES (5400, '921013094');
+INSERT INTO phones_shops (shop_id, phone) VALUES (5600, '978960939');
+INSERT INTO phones_shops (shop_id, phone) VALUES (5800, '923948241');
 
 INSERT INTO rrss_shops (shop_id, name, username) VALUES (5100, 'Instagram', 'pjvbarber.cl');
 INSERT INTO rrss_shops (shop_id, name, username) VALUES (5100, 'Facebook', 'pjvbarber');
