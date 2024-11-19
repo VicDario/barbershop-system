@@ -1,7 +1,7 @@
 name: barber_system
 services:
   postgres-db:
-    image: postgres:17
+    image: postgres:17-alpine
     container_name: postgres-db-barber
     restart: always
     environment:
