@@ -1,4 +1,4 @@
-version: '3.8'
+name: barber_system
 services:
   postgres-db:
     image: postgres:17
