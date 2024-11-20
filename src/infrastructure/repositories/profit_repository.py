@@ -35,31 +35,37 @@ class ProfitRepository(ProfitRepositoryInterface):
             GROUP BY b.shop_id
             ORDER BY shop_id;
         """, (date_param,))
-
-    def get_profits_from_sales_between_years(self, year_start: int, year_end: int):
-        return self.db.fetch_all("""
-            SELECT 
-                sv.shop_id,
-                SUM((p.price - si.discount) * si.number) AS total_profit
-            FROM sales_vouchers sv
-            JOIN sales_in si ON sv.number_voucher = si.number_voucher
-            JOIN products p ON si.product_code = p.code
-            WHERE EXTRACT(YEAR FROM sv.date) BETWEEN %s AND %s
-            GROUP BY sv.shop_id
-            ORDER BY shop_id;
-        """, (year_start, year_end))
     
-    def get_profits_from_services_between_years(self, year_start: int, year_end: int):
+    def get_shops_profits_between_years(self, year_start: int, year_end: int):
         return self.db.fetch_all("""
             SELECT
-                b.shop_id,
-                SUM(s.base_price - COALESCE(d.mount, 0)) AS total_profit
-            FROM bookings b
-            LEFT JOIN payment_documents pd ON b.code = pd.booking_code
-            LEFT JOIN discounts d ON pd.document_number = d.payment_document_number
-            LEFT JOIN attends a ON b.code = a.booking_code
-            LEFT JOIN services s ON a.service_code = s.code
-            WHERE EXTRACT(YEAR FROM b.date) BETWEEN %s AND %s
-            GROUP BY b.shop_id
+                shop_id,
+                sh.name,
+                SUM(profit) as profit
+            FROM (
+                SELECT 
+                    sv.shop_id,
+                    SUM((p.price - si.discount) * si.number) AS profit
+                FROM sales_vouchers sv
+                JOIN sales_in si ON sv.number_voucher = si.number_voucher
+                JOIN products p ON si.product_code = p.code
+                WHERE EXTRACT(YEAR FROM sv.date) between %s AND %s
+                GROUP BY sv.shop_id
+
+                UNION ALL
+
+                SELECT
+                    b.shop_id,
+                    SUM(s.base_price - COALESCE(d.mount, 0)) AS profit
+                FROM bookings b
+                LEFT JOIN payment_documents pd ON b.code = pd.booking_code
+                LEFT JOIN discounts d ON pd.document_number = d.payment_document_number
+                LEFT JOIN attends a ON b.code = a.booking_code
+                LEFT JOIN services s ON a.service_code = s.code
+                WHERE EXTRACT(YEAR FROM b.date) between %s AND %s
+                GROUP BY b.shop_id
+            ) AS combined_profits
+            join shops sh on sh.id = shop_id
+            group by shop_id, sh.name
             ORDER BY shop_id;
-        """, (year_start, year_end))
+        """, (year_start, year_end, year_start, year_end))
