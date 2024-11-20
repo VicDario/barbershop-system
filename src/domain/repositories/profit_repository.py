@@ -3,11 +3,7 @@ from datetime import datetime
 
 class ProfitRepositoryInterface(ABC):
     @abstractmethod
-    def get_profits_from_sales_since_date(self, date: datetime):
-        pass
-
-    @abstractmethod
-    def get_profits_from_services_since_date(self, date: datetime):
+    def get_shops_profits_higher_than_average_since_date(self, date: datetime):
         pass
 
     @abstractmethod
