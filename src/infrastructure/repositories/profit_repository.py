@@ -41,16 +41,3 @@ class ProfitRepository(ProfitRepositoryInterface):
     
     def get_profits_from_services_between_years(self, year_start: int, year_end: int):
         pass
-
-"""
-        SELECT 
-    b.code AS booking_code,
-    b.date AS service_date,
-    b.client_rut,
-    (b.price - COALESCE(d.mount, 0)) AS service_profit
-FROM booking b
-LEFT JOIN payment_document pd ON b.code = pd.booking_code
-LEFT JOIN discount d ON pd.document_number = d.payment_document_number
-WHERE b.date > %s
-ORDER BY service_profit DESC;
-"""
