@@ -54,11 +54,14 @@ class ProfitRepository(ProfitRepositoryInterface):
             SELECT
                 shop_id,
                 sh.name,
-                SUM(profit) as profit
+                SUM(sales_profit) AS sales_profit,
+                SUM(services_profit) AS services_profit,
+                SUM(sales_profit + services_profit) as profit
             FROM (
                 SELECT 
                     sv.shop_id,
-                    SUM((p.price - si.discount) * si.number) AS profit
+                    SUM((p.price - si.discount) * si.number) AS sales_profit,
+                    0 as services_profit
                 FROM sales_vouchers sv
                 JOIN sales_in si ON sv.number_voucher = si.number_voucher
                 JOIN products p ON si.product_code = p.code
@@ -69,7 +72,8 @@ class ProfitRepository(ProfitRepositoryInterface):
 
                 SELECT
                     b.shop_id,
-                    SUM(s.base_price - COALESCE(d.mount, 0)) AS profit
+                    0 AS sales_profit,
+                    SUM(s.base_price - COALESCE(d.mount, 0)) AS services_profit
                 FROM bookings b
                 LEFT JOIN payment_documents pd ON b.code = pd.booking_code
                 LEFT JOIN discounts d ON pd.document_number = d.payment_document_number
