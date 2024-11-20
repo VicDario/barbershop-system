@@ -2,16 +2,19 @@ class Menu:
     def __init__(
             self,
             lastyear_profits_usecase,
-            profits_between_years_usecase):
+            profits_between_years_usecase,
+            show_sales_vouchers_by_shops_usecase):
         self.lastyear_profits_usecase = lastyear_profits_usecase
         self.profits_between_years_usecase = profits_between_years_usecase
+        self.show_sales_vouchers_by_shops_usecase = show_sales_vouchers_by_shops_usecase
 
     def display(self):
         while True:
             print("\n--- Sistema de Barberias y Peluquerias ---")
-            print("1. Mostrar ganancias de ultimo año.")
-            print("2. Mostrar ganancias de entre dos años.")
-            print("3. Salir del programa.")
+            print("1. Mostrar ganancias de tiendas mayores a la media en el ultimo año.")
+            print("2. Mostrar ganancias de tiendas entre dos años.")
+            print("3. Mostrar documentos de ventas de las tiendas.")
+            print("4. Salir del programa.")
 
             choice = input("Selecciona una opción: ")
             self.handle_selection(choice)
@@ -22,6 +25,8 @@ class Menu:
         elif choice == '2':
             self.option_two()
         elif choice == '3':
+            self.option_three()
+        elif choice == '6':
             print("Saliendo...")
             exit(0)
         else:
@@ -43,6 +48,9 @@ class Menu:
 
         print("\n")
         self.profits_between_years_usecase.execute(year_start, year_end)
+
+    def option_three(self):
+        self.show_sales_vouchers_by_shops_usecase.execute()
 
     def __get_number(self, message) -> int:
         number = None
