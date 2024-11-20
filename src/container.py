@@ -33,4 +33,8 @@ class Container(containers.DeclarativeContainer):
     lastyear_profits_usecase = providers.Singleton(LastYearProfitsUseCase, profit_repository=profit_repository)
     profits_between_years_usecase = providers.Singleton(ProfitsBetweenYearsUseCase, profit_repository=profit_repository)
 
-    menu = providers.Factory(Menu, lastyear_profits_usecase=lastyear_profits_usecase)
+    menu = providers.Factory(
+        Menu,
+        lastyear_profits_usecase=lastyear_profits_usecase,
+        profits_between_years_usecase=profits_between_years_usecase
+    )
