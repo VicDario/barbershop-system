@@ -41,7 +41,7 @@ class Menu:
                 print("El año fin debe ser mayor al año inicial.")
                 year_end = None
 
-        print("/n")
+        print("\n")
         self.profits_between_years_usecase.execute(year_start, year_end)
 
     def __get_number(self, message) -> int:
