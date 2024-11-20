@@ -1,6 +1,8 @@
 from os import getenv
 from dependency_injector import containers, providers
 
+from .presentation.menu import Menu
+
 from .infrastructure.repositories.shop_repository import ShopRepository
 from .infrastructure.repositories.profit_repository import ProfitRepository
 
@@ -30,3 +32,5 @@ class Container(containers.DeclarativeContainer):
 
     lastyear_profits_usecase = providers.Singleton(LastYearProfitsUseCase, profit_repository=profit_repository)
     profits_between_years_usecase = providers.Singleton(ProfitsBetweenYearsUseCase, profit_repository=profit_repository)
+
+    menu = providers.Factory(Menu, lastyear_profits_usecase=lastyear_profits_usecase)
