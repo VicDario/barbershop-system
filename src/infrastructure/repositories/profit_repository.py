@@ -14,7 +14,7 @@ class ProfitRepository(ProfitRepositoryInterface):
                 SUM((p.price - si.discount) * si.number) AS total_profit
             FROM sales_vouchers sv
             JOIN sales_in si ON sv.number_voucher = si.number_voucher
-            JOIN productS p ON si.product_code = p.code
+            JOIN products p ON si.product_code = p.code
             WHERE sv.date > %s
             GROUP BY sv.shop_id
             ORDER BY shop_id;
@@ -37,7 +37,29 @@ class ProfitRepository(ProfitRepositoryInterface):
         """, (date_param,))
 
     def get_profits_from_sales_between_years(self, year_start: int, year_end: int):
-        pass
+        return self.db.fetch_all("""
+            SELECT 
+                sv.shop_id,
+                SUM((p.price - si.discount) * si.number) AS total_profit
+            FROM sales_vouchers sv
+            JOIN sales_in si ON sv.number_voucher = si.number_voucher
+            JOIN products p ON si.product_code = p.code
+            WHERE EXTRACT(YEAR FROM sv.date) BETWEEN %s AND %s
+            GROUP BY sv.shop_id
+            ORDER BY shop_id;
+        """, (year_start, year_end))
     
     def get_profits_from_services_between_years(self, year_start: int, year_end: int):
-        pass
+        return self.db.fetch_all("""
+            SELECT
+                b.shop_id,
+                SUM(s.base_price - COALESCE(d.mount, 0)) AS total_profit
+            FROM bookings b
+            LEFT JOIN payment_documents pd ON b.code = pd.booking_code
+            LEFT JOIN discounts d ON pd.document_number = d.payment_document_number
+            LEFT JOIN attends a ON b.code = a.booking_code
+            LEFT JOIN services s ON a.service_code = s.code
+            WHERE EXTRACT(YEAR FROM b.date) BETWEEN %s AND %s
+            GROUP BY b.shop_id
+            ORDER BY shop_id;
+        """, (year_start, year_end))
