@@ -195,6 +195,7 @@ INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (2, '2021-
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (3, '2024-01-01 13:00', 'Completed', '27321459-1', 5200);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (4, '2022-03-01 14:00', 'Completed', '22098341-2', 5200);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (5, '2021-12-03 15:00', 'Completed', '9083942-3', 5400);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (6, '2024-03-23 12:00', 'Completed', '27321459-1', 5100);
 
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (1, 100, '25345678-9');
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (1, 200, '25345678-9');
@@ -202,13 +203,15 @@ INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (2, 200, '
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (2, 400, '22098341-2');
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (3, 300, '22098341-2');
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (4, 200, '27321459-1');
-INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (5, 500, '26983090-0');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (5, 500, '9083942-3');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (6, 500, '27321459-1');
 
 INSERT INTO payment_documents (document_number, booking_code) VALUES (1, 1);
 INSERT INTO payment_documents (document_number, booking_code) VALUES (2, 2);
 INSERT INTO payment_documents (document_number, booking_code) VALUES (3, 3);
 INSERT INTO payment_documents (document_number, booking_code) VALUES (4, 4);
 INSERT INTO payment_documents (document_number, booking_code) VALUES (5, 5);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (6, 6);
 
 INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (1, 0.10, '2023-08-20');
 INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (2, 0.20, '2024-02-17');
