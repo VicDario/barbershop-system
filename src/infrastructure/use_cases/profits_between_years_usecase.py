@@ -1,3 +1,4 @@
+from tabulate import tabulate
 from src.domain.repositories.profit_repository import ProfitRepositoryInterface
 
 class ProfitsBetweenYearsUseCase:
@@ -7,6 +8,6 @@ class ProfitsBetweenYearsUseCase:
     def execute(self, year_start: int, year_end: int):
         profits = self.repository.get_shops_profits_between_years(year_start, year_end)
         print(f"Ganancias entre los años {year_start} y {year_end}")
-        print("ID tienda | Nombre tienda | Ganancias en período")
-        for profit in profits:
-            print(f"{str(profit["shop_id"]).ljust(9, ' ')} | {profit["name"].ljust(7, ' ')} | {profit["profit"]}")
+        headers = ["ID tienda", "Nombre tienda", "Ganancias servicios", "Ganancias ventas", "Ganancias totales"]
+        rows = [[profit["shop_id"], profit["name"], profit["services_profit"], profit["sales_profit"], profit["profit"]] for profit in profits]
+        print(tabulate(rows, headers, tablefmt="grid"))
