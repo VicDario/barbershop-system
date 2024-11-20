@@ -1,7 +1,7 @@
-from src.domain.repositories.sales_repository import SalesRepositoryInterface
+from src.domain.repositories.profit_repository import ProfitRepositoryInterface
 
-class IncomesBetweenYearsUseCase:
-    def __init__(self, sales_repository: SalesRepositoryInterface):
+class ProfitsBetweenYearsUseCase:
+    def __init__(self, sales_repository: ProfitRepositoryInterface):
         self.repository = sales_repository
 
     def execute(self, year_start: int, year_end: int):
