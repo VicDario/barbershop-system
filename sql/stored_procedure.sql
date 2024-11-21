@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE get_data(year_param INTEGER, OUT data_cursor REFCURSOR)
+CREATE OR REPLACE PROCEDURE getData(year_param INTEGER, OUT data_cursor REFCURSOR)
 LANGUAGE plpgsql
 AS $$
 BEGIN
