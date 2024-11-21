@@ -14,6 +14,7 @@ from .infrastructure.use_cases.lastyear_profits_usecase import LastYearProfitsUs
 from .infrastructure.use_cases.show_sales_vouchers_by_shop_usecase import ShowSalesVouchersByShop
 from .infrastructure.use_cases.daily_clients_attended_usecase import DailyClientsAttendedUseCase
 from .infrastructure.use_cases.daily_bookings_attended_by_worker_usecase import DailyBookingsAttendedByWorkerUseCase
+from .infrastructure.use_cases.generate_chart_usecase import GenerateChartUseCase
 
 from .db.postgresql import DatabaseConfig, PostgresDatabase
 from dotenv import load_dotenv
@@ -44,7 +45,7 @@ class Container(containers.DeclarativeContainer):
     show_sales_vouchers_by_shops_usecase = providers.Singleton(ShowSalesVouchersByShop, voucher_repository=voucher_repository)
     daily_client_usecase = providers.Singleton(DailyClientsAttendedUseCase, daily_client_repository=daily_client_repository)
     daily_bookings_attended_usecase = providers.Singleton(DailyBookingsAttendedByWorkerUseCase, daily_bookings_attended_by_worker=daily_bookings_attended_by_worker)
-    
+    generate_chart_usecase = providers.Singleton(GenerateChartUseCase, profit_repository=profit_repository)
     
     menu = providers.Factory(
         Menu,
@@ -52,6 +53,6 @@ class Container(containers.DeclarativeContainer):
         profits_between_years_usecase=profits_between_years_usecase,
         show_sales_vouchers_by_shops_usecase=show_sales_vouchers_by_shops_usecase,
         daily_client_usecase=daily_client_usecase,
-        daily_bookings_attended_usecase=daily_bookings_attended_usecase
-        
+        daily_bookings_attended_usecase=daily_bookings_attended_usecase,
+        generate_chart_usecase=generate_chart_usecase
     )
