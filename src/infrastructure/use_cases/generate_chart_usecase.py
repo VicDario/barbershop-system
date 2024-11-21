@@ -1,3 +1,5 @@
+import os
+import platform
 import matplotlib.pyplot as plt
 from src.domain.repositories.profit_repository import ProfitRepositoryInterface
 
@@ -24,3 +26,15 @@ class GenerateChartUseCase:
         plt.savefig(output_path, format="png", dpi=300)
         plt.close()
         print(f"Chart saved as {output_path}")
+        self.__open_image(output_path)
+
+    def __open_image(self, file_path):
+        try:
+            if platform.system() == "Windows":
+                os.startfile(file_path)
+            elif platform.system() == "Darwin":
+                os.system(f"open {file_path}")
+            else:
+                os.system(f"xdg-open {file_path}")
+        except:
+            print("Error abriendo gráfico.")
