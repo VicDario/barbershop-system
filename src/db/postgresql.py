@@ -43,7 +43,7 @@ class DatabaseInterface(ABC):
         pass
 
     @abstractmethod
-    def call_procedure(self, procedure_name: str, params: tuple) -> List[dict]:
+    def call_procedure(self, procedure_name: str, params: tuple = (), fetch_cursor: Optional[str] = None) -> List[dict]:
         pass
 
 class PostgresDatabase(DatabaseInterface):
@@ -96,10 +96,15 @@ class PostgresDatabase(DatabaseInterface):
             cursor.execute(query, params)
             return cursor.fetchall()
     
-    def call_procedure(self, procedure_name: str, params: tuple) -> List[dict]:
-        """Execute a stored procedure and return the result as a list of dictionaries"""
+    def call_procedure(self, procedure_name: str, params: tuple = (), fetch_cursor: Optional[str] = None) -> List[dict]:
         with self.get_cursor() as cursor:
-            # Use the proper query to call the procedure
-            cursor.callproc(procedure_name, params)
-            # Fetch all data returned by the procedure
-            return cursor.fetchall()
+            # Construct the CALL statement
+            placeholders = ", ".join(["%s"] * len(params))
+            call_query = f"CALL {procedure_name}({placeholders})"
+            cursor.execute(call_query, params)
+
+            # Fetch from the cursor if specified
+            if fetch_cursor:
+                cursor.execute(f"FETCH ALL IN {fetch_cursor};")
+                return cursor.fetchall()
+        return []
