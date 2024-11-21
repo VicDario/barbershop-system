@@ -6,7 +6,7 @@ BEGIN
     OPEN data_cursor FOR
     SELECT 
         s.name AS service_name,
-        SUM(s.base_price) AS total_revenue
+        SUM(s.base_price) AS total_profit
     FROM bookings b
     JOIN attends a ON b.code = a.booking_code
     JOIN services s ON a.service_code = s.code
