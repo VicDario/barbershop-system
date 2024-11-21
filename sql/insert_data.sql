@@ -62,7 +62,7 @@ INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('27321459
 INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('22098341-2', 'Fake certificate');
 INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('9083942-3', 'Fake certificate');
 
-INSERT INTO services (code, name, base_price) VALUES (100, 'Corte de caBello', 10000);
+INSERT INTO services (code, name, base_price) VALUES (100, 'Corte de Cabello', 10000);
 INSERT INTO services (code, name, base_price) VALUES (200, 'Corte de barba', 8000);
 INSERT INTO services (code, name, base_price) VALUES (300, 'Peinado', 6000);
 INSERT INTO services (code, name, base_price) VALUES (400, 'Tinte de pelo', 20000);
