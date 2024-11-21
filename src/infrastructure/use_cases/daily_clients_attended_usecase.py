@@ -1,21 +1,14 @@
-from src.db.postgresql import DatabaseInterface
+from tabulate import tabulate
+
 class DailyClientsAttendedUseCase:
-    def __init__(self, db: DatabaseInterface) -> None:
-        self.db = db
+    def __init__(self, daily_client_repository):
+        self.repository = daily_client_repository
         
-    def get_daily_attended(self,id: int):
-        return self.db.fetch_one("""
-    SELECT 
-        date, 
-        c.rut AS client_rut, 
-        CONCAT(c.name, ' ', c.surname) AS client_name, 
-        c.email AS client_email, 
-        b.code AS booking_code, 
-        b.shop_id AS shop_id
-    FROM bookings b
-    JOIN clients c ON c.rut = b.client_rut
-    JOIN attends a ON b.code = a.booking_code
-    GROUP by date, c.rut, b.code, b.shop_id
-    ORDER BY date;                            
-                                 
-                                 """)
+    def execute(self):
+        daily_clients = self.repository.get_daily_attended()
+        print(f"Clientes atendidos el día")
+        headers = ["Fecha", "Rut cliente", "Nombre cliente", "Email cliente", "Código reserva", "ID tienda"]
+        rows = [[daily_client["date"], daily_client["client_rut"], daily_client["client_name"], daily_client["client_email"], daily_client["booking_code"], daily_client["shop_id"]] for daily_client in daily_clients]
+        print(tabulate(rows, headers, tablefmt="grid")) #que es esto? xd
+        
+    
