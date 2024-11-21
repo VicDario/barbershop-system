@@ -94,4 +94,5 @@ class ProfitRepository(ProfitRepositoryInterface):
         """, (year_start, year_end, year_start, year_end))
     
     def services_profits_by_year(self, year: int):
-        return self.db.call_procedure("getData", (year,))
+        cursor = 'data_cursor'
+        return self.db.call_procedure("getData", (year, cursor), cursor)
