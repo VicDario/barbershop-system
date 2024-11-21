@@ -6,7 +6,7 @@ class DailyClientsAttendedUseCase:
         
     def execute(self):
         daily_clients = self.repository.get_daily_attended()
-        print(f"Clientes atendidos el día")
+        print(f"Clientes atendidos diariamente por Trabajador")
         headers = ["Fecha", "Rut cliente", "Nombre cliente", "Email cliente", "Código reserva", "ID tienda"]
         rows = [[daily_client["date"], daily_client["client_rut"], daily_client["client_name"], daily_client["client_email"], daily_client["booking_code"], daily_client["shop_id"]] for daily_client in daily_clients]
         print(tabulate(rows, headers, tablefmt="grid"))
