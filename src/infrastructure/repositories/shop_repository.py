@@ -5,4 +5,4 @@ class ShopRepository:
         self.db = db
     
     def get_by_id(self, id: int):
-        return self.db.fetch_one("SELECT name FROM shop WHERE id=%s;", [id])
+        return self.db.fetch_one("SELECT name FROM shops WHERE id=%s;", [id])
