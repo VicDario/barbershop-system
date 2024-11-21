@@ -3,13 +3,13 @@ class Menu:
             self,
             lastyear_profits_usecase,
             profits_between_years_usecase,
-            daily_clients_usecase,
+            daily_client_usecase,
             daily_bookings_attended_usecase,
             show_sales_vouchers_by_shops_usecase):
         self.lastyear_profits_usecase = lastyear_profits_usecase
         self.profits_between_years_usecase = profits_between_years_usecase
         self.show_sales_vouchers_by_shops_usecase = show_sales_vouchers_by_shops_usecase
-        self.daily_clients_usecase = daily_clients_usecase
+        self.daily_client_usecase = daily_client_usecase
         self.daily_bookings_attended_usecase = daily_bookings_attended_usecase
         
     def display(self):
