@@ -4,11 +4,13 @@ class Menu:
             lastyear_profits_usecase,
             profits_between_years_usecase,
             daily_clients_usecase,
+            daily_bookings_attended_usecase,
             show_sales_vouchers_by_shops_usecase):
         self.lastyear_profits_usecase = lastyear_profits_usecase
         self.profits_between_years_usecase = profits_between_years_usecase
         self.show_sales_vouchers_by_shops_usecase = show_sales_vouchers_by_shops_usecase
         self.daily_clients_usecase = daily_clients_usecase
+        self.daily_bookings_attended_usecase = daily_bookings_attended_usecase
         
     def display(self):
         while True:
@@ -17,6 +19,7 @@ class Menu:
             print("2. Mostrar ganancias de tiendas entre dos años.")
             print("3. Mostrar documentos de ventas de las tiendas.")
             print("4. Clientes atendidos el día.")
+            print("5. Reservas atendidas por trabajador.")
             print("6. Salir del programa.")
 
             choice = input("Selecciona una opción: ")
@@ -31,6 +34,8 @@ class Menu:
             self.option_three()
         elif choice == '4':
             self.option_four()
+        elif choice == '5':
+            self.option_five()
         elif choice == '6':
             print("Saliendo...")
             exit(0)
@@ -59,6 +64,9 @@ class Menu:
         
     def option_four(self):
         self.daily_clients_usecase.execute()
+        
+    def option_five(self):
+        self.daily_bookings_attended_usecase.execute()
 
     def __get_number(self, message) -> int:
         number = None

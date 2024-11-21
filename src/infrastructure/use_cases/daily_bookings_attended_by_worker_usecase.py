@@ -1,9 +1,13 @@
-from src.db.postgresql import DatabaseInterface
-pass
+from tabulate import tabulate
 
 class DailyBookingsAttendedByWorkerUseCase:
-    def __init__(self, db: DatabaseInterface) -> None:
-        self.db = db
+    def __init__(self, daily_bookings_attended_by_worker):
+        self.repository = daily_bookings_attended_by_worker
         
-    def get_daily_attended(self,id: int):
-        return self.db.fetch_one("SELECT rut, name, surname, email, date, shop_id, booking_code, service_code FROM bookings, clients, attends order by date")
+    def execute(self):
+        daily_booking = self.repository.get_daily_booking_employees()
+        print(f"Reservas atendidas por trabajador")
+        headers = ["Fecha", "Rut empleado", "Nombre empleado", "ID tienda", "Total reservas"]
+        rows = [[daily_booking["booking_date"], daily_booking["employee_rut"], daily_booking["employee_name"], daily_booking["shop_id"], daily_booking["total_bookings"]] for daily_booking in daily_booking]
+        print(tabulate(rows, headers, tablefmt="grid")) 
+      
