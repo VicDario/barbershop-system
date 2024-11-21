@@ -92,3 +92,6 @@ class ProfitRepository(ProfitRepositoryInterface):
             GROUP BY shop_id, sh.name
             ORDER BY shop_id;
         """, (year_start, year_end, year_start, year_end))
+    
+    def services_profits_by_year(self, year: int):
+        return self.db.call_procedure("getData", (year,))

@@ -10,5 +10,7 @@ class ProfitRepositoryInterface(ABC):
     def get_shops_profits_between_years(self, year_start: int, year_end: int):
         pass
     
-
+    @abstractmethod
+    def services_profits_by_year(self, year: int):
+        pass
     
