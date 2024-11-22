@@ -4,6 +4,8 @@ INSERT INTO shops (id, name, street, street_number, community) VALUES (5400, 'PL
 INSERT INTO shops (id, name, street, street_number, community) VALUES (5600, 'FJ BARBER SHOP', 'MARACAIBO', 993, 'Santiago');
 INSERT INTO shops (id, name, street, street_number, community) VALUES (5800, 'MA STYLES SHOP', 'CLAUDIO ARRAY', 421, 'Santiago');
 
+
+
 INSERT INTO phones_shops (shop_id, phone) VALUES (5100, '964537263');
 INSERT INTO phones_shops (shop_id, phone) VALUES (5100, '939431233');
 INSERT INTO phones_shops (shop_id, phone) VALUES (5200, '962498726');
@@ -11,12 +13,16 @@ INSERT INTO phones_shops (shop_id, phone) VALUES (5400, '921013094');
 INSERT INTO phones_shops (shop_id, phone) VALUES (5600, '978960939');
 INSERT INTO phones_shops (shop_id, phone) VALUES (5800, '923948241');
 
+
+
 INSERT INTO rrss_shops (shop_id, name, username) VALUES (5100, 'Instagram', 'pjvbarber.cl');
 INSERT INTO rrss_shops (shop_id, name, username) VALUES (5100, 'Facebook', 'pjvbarber');
 INSERT INTO rrss_shops (shop_id, name, username) VALUES (5200, 'Facebook', 'vd.stylescl');
 INSERT INTO rrss_shops (shop_id, name, username) VALUES (5400, 'Instagram', 'pl__barbershop');
 INSERT INTO rrss_shops (shop_id, name, username) VALUES (5600, 'Facebook', 'fjbarber._cl');
 INSERT INTO rrss_shops (shop_id, name, username) VALUES (5800, 'Instagram', 'mastylescl_');
+
+
 
 INSERT INTO schedule_shops (shop_id, week_day, start_time, end_time) VALUES (5100, 'Lunes', '09:00', '19:00');
 INSERT INTO schedule_shops (shop_id, week_day, start_time, end_time) VALUES (5100, 'Martes', '09:00', '19:00');
@@ -34,12 +40,24 @@ INSERT INTO schedule_shops (shop_id, week_day, start_time, end_time) VALUES (540
 INSERT INTO schedule_shops (shop_id, week_day, start_time, end_time) VALUES (5400, 'Viernes', '09:00', '19:00');
 INSERT INTO schedule_shops (shop_id, week_day, start_time, end_time) VALUES (5400, 'Sabado', '09:00', '14:00');
 
+
+
 INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, category, shop_id) VALUES ('25345678-9', 'Pedro', 'Vargas', 'https://images.app.goo.gl/KWAV2UbV42WUxQZq6', 8000, 0, '2023-08-20', 'Barbero', 5100);
 INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, category, shop_id) VALUES ('26983090-0', 'Victor', 'Diaz', 'https://images.app.goo.gl/rYU5dEpRCEvJZAJS6', 15000, 0, '2021-02-17', 'Barbero', 5200);
 INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, category, shop_id) VALUES ('27321459-1', 'Pablo', 'Lopez', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Bn2OfR0FhkDpo3xxsA1eAMHF9HCjqx7MmQ&s', 50000, 0, '2021-01-01', 'Estilista', 5100);
 INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, category, shop_id) VALUES ('22098341-2', 'Felipe', 'Jara', 'https://images.app.goo.gl/8eLUMepyurr6BrTV9', 12099, 0, '2022-03-01', 'Estilista', 5400);
 INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, category, shop_id) VALUES ('9083942-3', 'Miguel', 'Alvarez', 'https://images.app.goo.gl/LhjWhznujq2M4WY98', 60095, 0, '2021-12-03', 'Barbero', 5400);
-INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, shop_id) VALUES ('12849342-3', 'Manuel', 'Alvarez', 'https://images.app.goo.gl/LhjWhznujq2M4WY98', 600950, 1, '2022-12-15', 5600);
+INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, category, shop_id) VALUES ('12849342-3', 'Manuel', 'Alvarez', 'https://images.app.goo.gl/LhjWhznujq2M4WY98', 600950, 1, '2022-12-15','Barbero' 5600);
+INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, category, shop_id) VALUES ('25345678-9', 'Pedro', 'Vargas', 'https://images.app.goo.gl/KWAV2UbV42WUxQZq6', 8000, 0, '2023-08-20', 'Barbero', 5100);
+INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, category, shop_id) VALUES ('26983090-0', 'Victor', 'Diaz', 'https://images.app.goo.gl/rYU5dEpRCEvJZAJS6', 15000, 0, '2021-02-17', 'Barbero', 5200);
+INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, category, shop_id) VALUES ('27321459-1', 'Pablo', 'Lopez', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Bn2OfR0FhkDpo3xxsA1eAMHF9HCjqx7MmQ&s', 50000, 0, '2021-01-01', 'Estilista', 5100);
+INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, category, shop_id) VALUES ('22098341-2', 'Felipe', 'Jara', 'https://images.app.goo.gl/8eLUMepyurr6BrTV9', 12099, 0, '2022-03-01', 'Estilista', 5400);
+INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, category, shop_id) VALUES ('9083942-3', 'Miguel', 'Alvarez', 'https://images.app.goo.gl/LhjWhznujq2M4WY98', 60095, 0, '2021-12-03', 'Barbero', 5400);
+INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, category, shop_id) VALUES ('12849342-3', 'Manuel', 'Alvarez', 'https://images.app.goo.gl/LhjWhznujq2M4WY98', 600950, 1, '2022-12-15', 'Administrativo', 5600);
+INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, category, shop_id) VALUES ('18927654-7', 'Laura', 'Mendez', 'https://images.app.goo.gl/X8kT3cP4gJG4KdqG8', 45000, 0, '2021-05-12', 'Barbera', 5100);
+INSERT INTO employees (rut, name, surname, picture, salary, employee_type, start_activities, category, shop_id) VALUES ('21094837-6', 'Ricardo', 'Fuentes', 'https://images.app.goo.gl/Xk4kTP5fjG4U3dQh8', 70000, 0, '2023-01-20', 'Estilista', 5200);
+
+
 
 INSERT INTO schedule_employees (employee_rut, week_day, start_time, end_time) VALUES ('25345678-9', 'Lunes', '09:00', '19:00');
 INSERT INTO schedule_employees (employee_rut, week_day, start_time, end_time) VALUES ('25345678-9', 'Martes', '09:00', '19:00');
@@ -52,15 +70,32 @@ INSERT INTO schedule_employees (employee_rut, week_day, start_time, end_time) VA
 INSERT INTO schedule_employees (employee_rut, week_day, start_time, end_time) VALUES ('26983090-0', 'Jueves', '09:00', '19:00');
 INSERT INTO schedule_employees (employee_rut, week_day, start_time, end_time) VALUES ('26983090-0', 'Viernes', '09:00', '19:00');
 
+
+
 INSERT INTO skills_receptionist (employee_rut, skill) VALUES ('12849342-3', 'Habla ingles');
 INSERT INTO skills_receptionist (employee_rut, skill) VALUES ('12849342-3', 'Excelente servicio al cliente');
 INSERT INTO skills_receptionist (employee_rut, skill) VALUES ('12849342-3', 'Manejo de Office');
+INSERT INTO skills_receptionist (employee_rut, skill) VALUES ('12849342-3', 'Manejo de redes sociales');
+INSERT INTO skills_receptionist (employee_rut, skill) VALUES ('12849342-3', 'Manejo de caja');
 
-INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('25345678-9', 'Fake certificate');
+
+
+INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('25345678-9', 'original certificate');
 INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('26983090-0', 'Fake certificate');
-INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('27321459-1', 'Fake certificate');
+INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('27321459-1', 'original certificate');
 INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('22098341-2', 'Fake certificate');
-INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('9083942-3', 'Fake certificate');
+INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('9083942-3',  'Fake certificate');
+INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('25345678-9', 'Fake certificate');
+INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('26983090-0', 'original certificate');
+INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('27321459-1', 'Fake certificate');
+INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('22098341-2', 'original certificate');
+INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('9083942-3',  'Fake certificate');
+INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('12849342-3', 'Fake certificate');
+INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('18927654-7', 'Fake certificate');
+INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('21094837-6', 'Fake certificate');
+INSERT INTO certificates_employees (employee_rut, certificate) VALUES ('23478965-4', 'original certificate');
+
+
 
 INSERT INTO services (code, name, base_price) VALUES (100, 'Corte de cabello', 10000);
 INSERT INTO services (code, name, base_price) VALUES (200, 'Corte de barba', 8000);
@@ -77,6 +112,26 @@ INSERT INTO services (code, name, base_price) VALUES (715, 'Tratamiento capilar'
 INSERT INTO services (code, name, base_price) VALUES (200, 'Corte de barba', 8000);
 INSERT INTO services (code, name, base_price) VALUES (653, 'Extensiones de Cabello', 120000);
 INSERT INTO services (code, name, base_price) VALUES (300, 'Peinado', 6000);
+INSERT INTO services (code, name, base_price) VALUES (100, 'Corte de cabello', 10000);
+INSERT INTO services (code, name, base_price) VALUES (200, 'Corte de barba', 8000);
+INSERT INTO services (code, name, base_price) VALUES (300, 'Peinado', 6000);
+INSERT INTO services (code, name, base_price) VALUES (400, 'Coloración de cabello', 50000);
+INSERT INTO services (code, name, base_price) VALUES (500, 'Alisado de cabello', 25000);
+INSERT INTO services (code, name, base_price) VALUES (600, 'Tratamiento de keratina', 45000);
+INSERT INTO services (code, name, base_price) VALUES (700, 'Masaje capilar', 15000);
+INSERT INTO services (code, name, base_price) VALUES (800, 'Peinado de fiesta', 20000);
+INSERT INTO services (code, name, base_price) VALUES (900, 'Tinte de barba', 12000);
+INSERT INTO services (code, name, base_price) VALUES (1000, 'Limpieza capilar', 18000);
+INSERT INTO services (code, name, base_price) VALUES (1100, 'Tratamiento anticaída', 30000);
+INSERT INTO services (code, name, base_price) VALUES (1200, 'Corte de cabello infantil', 8000);
+INSERT INTO services (code, name, base_price) VALUES (1300, 'Afeitado clásico', 6000);
+INSERT INTO services (code, name, base_price) VALUES (1400, 'Depilación facial', 10000);
+INSERT INTO services (code, name, base_price) VALUES (1500, 'Tratamiento de barba', 15000);
+INSERT INTO services (code, name, base_price) VALUES (1600, 'Extensiones de cabello', 50000);
+INSERT INTO services (code, name, base_price) VALUES (1700, 'Ondulado permanente', 25000);
+INSERT INTO services (code, name, base_price) VALUES (1800, 'Baño de crema', 20000);
+INSERT INTO services (code, name, base_price) VALUES (1900, 'Peinado formal', 15000);
+INSERT INTO services (code, name, base_price) VALUES (2000, 'Aclarado de cabello', 18000);
 
 
 
@@ -85,18 +140,63 @@ INSERT INTO performs (employee_rut, service_code, is_expert) VALUES ('26983090-0
 INSERT INTO performs (employee_rut, service_code, is_expert) VALUES ('27321459-1', 300, TRUE);
 INSERT INTO performs (employee_rut, service_code, is_expert) VALUES ('22098341-2', 400, FALSE);
 INSERT INTO performs (employee_rut, service_code, is_expert) VALUES ('9083942-3', 500, FALSE);
+INSERT INTO performs (employee_rut, service_code, is_expert) VALUES ('25345678-9', 100, TRUE);
+INSERT INTO performs (employee_rut, service_code, is_expert) VALUES ('26983090-0', 200, TRUE);
+INSERT INTO performs (employee_rut, service_code, is_expert) VALUES ('27321459-1', 300, TRUE);
+INSERT INTO performs (employee_rut, service_code, is_expert) VALUES ('22098341-2', 400, FALSE);
+INSERT INTO performs (employee_rut, service_code, is_expert) VALUES ('9083942-3', 500, FALSE);
+INSERT INTO performs (employee_rut, service_code, is_expert) VALUES ('12849342-3', 600, TRUE);
+INSERT INTO performs (employee_rut, service_code, is_expert) VALUES ('18927654-7', 700, TRUE);
+INSERT INTO performs (employee_rut, service_code, is_expert) VALUES ('21094837-6', 800, FALSE);
+INSERT INTO performs (employee_rut, service_code, is_expert) VALUES ('23478965-4', 900, TRUE);
+
+
 
 INSERT INTO combos (combo_number, price) VALUES (1, 20000);
 INSERT INTO combos (combo_number, price) VALUES (2, 25000);
 INSERT INTO combos (combo_number, price) VALUES (3, 30000);
 INSERT INTO combos (combo_number, price) VALUES (4, 35000);
 INSERT INTO combos (combo_number, price) VALUES (5, 40000);
+INSERT INTO combos (combo_number, price) VALUES (6, 45000);
+INSERT INTO combos (combo_number, price) VALUES (7, 50000);
+INSERT INTO combos (combo_number, price) VALUES (8, 55000);
+INSERT INTO combos (combo_number, price) VALUES (9, 60000);
+INSERT INTO combos (combo_number, price) VALUES (10, 65000);
+INSERT INTO combos (combo_number, price) VALUES (11, 70000);
+INSERT INTO combos (combo_number, price) VALUES (12, 75000);
+INSERT INTO combos (combo_number, price) VALUES (13, 80000);
+INSERT INTO combos (combo_number, price) VALUES (14, 85000);
+INSERT INTO combos (combo_number, price) VALUES (15, 90000);
+INSERT INTO combos (combo_number, price) VALUES (16, 95000);
+INSERT INTO combos (combo_number, price) VALUES (17, 100000);
+INSERT INTO combos (combo_number, price) VALUES (18, 105000);
+INSERT INTO combos (combo_number, price) VALUES (19, 110000);
+INSERT INTO combos (combo_number, price) VALUES (20, 115000);
+
+
 
 INSERT INTO offer_in (combo_number, service_code) VALUES (1, 100);
-INSERT INTO offer_in (combo_number, service_code) VALUES (1, 200);
-INSERT INTO offer_in (combo_number, service_code) VALUES (2, 300);
-INSERT INTO offer_in (combo_number, service_code) VALUES (2, 400);
-INSERT INTO offer_in (combo_number, service_code) VALUES (2, 500);
+INSERT INTO offer_in (combo_number, service_code) VALUES (2, 200);
+INSERT INTO offer_in (combo_number, service_code) VALUES (3, 300);
+INSERT INTO offer_in (combo_number, service_code) VALUES (4, 400);
+INSERT INTO offer_in (combo_number, service_code) VALUES (5, 500);
+INSERT INTO offer_in (combo_number, service_code) VALUES (6, 600);
+INSERT INTO offer_in (combo_number, service_code) VALUES (7, 700);
+INSERT INTO offer_in (combo_number, service_code) VALUES (8, 800);
+INSERT INTO offer_in (combo_number, service_code) VALUES (9, 900);
+INSERT INTO offer_in (combo_number, service_code) VALUES (10, 1000);
+INSERT INTO offer_in (combo_number, service_code) VALUES (11, 1100);
+INSERT INTO offer_in (combo_number, service_code) VALUES (12, 1200);
+INSERT INTO offer_in (combo_number, service_code) VALUES (13, 1300);
+INSERT INTO offer_in (combo_number, service_code) VALUES (14, 1400);
+INSERT INTO offer_in (combo_number, service_code) VALUES (15, 1500);
+INSERT INTO offer_in (combo_number, service_code) VALUES (16, 1600);
+INSERT INTO offer_in (combo_number, service_code) VALUES (17, 1700);
+INSERT INTO offer_in (combo_number, service_code) VALUES (18, 1800);
+INSERT INTO offer_in (combo_number, service_code) VALUES (19, 1900);
+INSERT INTO offer_in (combo_number, service_code) VALUES (20, 2000);
+
+
 
 INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('25345678-9', 'Pedro', 'Vargas', 'Amonategui', 92, 'Santiago', '1993-08-20', 'pedrovargas@email.com', 4);
 INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('26983090-0', 'Victor', 'Diaz', 'ANDRES BELLO', 620, 'Povidencia', '1991-02-17', 'victordiaz@email.com', 3);
@@ -123,6 +223,27 @@ INSERT INTO clients (rut, name, surname, street, street_number, community, birth
 INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('21987654-8', 'Antonia', 'Moreno', 'JOSE MANUEL INFANTE', 333, 'Ñuñoa', '1996-10-22', 'antoniamoreno@email.com', 1);
 INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('26458731-0', 'Francisco', 'Araya', 'PRINCIPE DE GALES', 520, 'Las Condes', '1990-07-19', 'franciscoaraya@email.com', 2);
 INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('21456378-3', 'Catalina', 'Vega', 'IRARRAZAVAL', 870, 'Ñuñoa', '1994-01-05', 'catalinavega@email.com', 3);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('26781234-5', 'Rodrigo', 'Guzman', 'LAGUNA SUR', 400, 'Pudahuel', '1988-07-11', 'rodrigoguzman@email.com', 2);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('19548632-9', 'Alejandra', 'Molina', 'LAS HUALTATAS', 300, 'Las Condes', '1993-09-25', 'alejandramolina@email.com', 1);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('20875364-7', 'Esteban', 'Ortega', 'LOS MILITARES', 620, 'Las Condes', '1992-12-14', 'estebanortega@email.com', 3);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('27458961-3', 'Carla', 'Figueroa', 'SIMON BOLIVAR', 478, 'Ñuñoa', '1995-05-29', 'carlafigueroa@email.com', 4);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('26874532-2', 'Luis', 'Sanchez', 'NUNOA', 1012, 'Ñuñoa', '1990-09-13', 'luissanchez@email.com', 2);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('25764321-7', 'Monica', 'Vargas', 'TOBALABA', 540, 'Providencia', '1991-03-04', 'monicavargas@email.com', 3);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('22986543-8', 'Patricio', 'Espinoza', 'LO BARNECHEA', 320, 'Lo Barnechea', '1989-11-20', 'patricioespinoza@email.com', 4);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('21987643-5', 'Elena', 'Salinas', 'VICUNA MACKENNA', 890, 'Ñuñoa', '1992-10-18', 'elenasalinas@email.com', 1);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('27865432-1', 'Mauricio', 'Campos', 'ROSAS', 760, 'Santiago', '1987-01-25', 'mauriciocampos@email.com', 3);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('20489567-9', 'Natalia', 'Fuentes', 'MERINO', 150, 'Providencia', '1994-11-13', 'nataliafuentes@email.com', 2);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('19876543-0', 'Juan', 'Rodriguez', 'ALCANTARA', 234, 'Las Condes', '1990-08-21', 'juanrodriguez@email.com', 4);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('21876542-3', 'Lucia', 'Villanueva', 'DOMINICA', 480, 'Providencia', '1991-04-15', 'luciavillanueva@email.com', 1);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('24356781-9', 'Felipe', 'Miranda', 'HUERFANOS', 100, 'Santiago', '1989-12-30', 'felipemiranda@email.com', 2);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('20567843-2', 'Daniel', 'Castillo', 'ANTONIA LOPEZ', 610, 'Vitacura', '1988-05-12', 'danielcastillo@email.com', 3);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('22789653-7', 'Gabriela', 'Aravena', 'PLAZA EGAÑA', 450, 'Ñuñoa', '1993-06-24', 'gabrielaaravena@email.com', 1);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('24897631-2', 'Diego', 'Navarro', 'LOS PRESIDENTES', 590, 'La Reina', '1991-07-30', 'diegonavarro@email.com', 3);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('27568421-5', 'Isabel', 'Hernandez', 'MATUCANA', 310, 'Santiago', '1992-01-02', 'isabelhernandez@email.com', 4);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('26357841-7', 'Jorge', 'Pizarro', 'ALMIRANTE PASTENE', 720, 'Providencia', '1993-08-22', 'jorgepizarro@email.com', 2);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('21987653-4', 'Ana', 'Martinez', 'LOS PINOS', 280, 'La Florida', '1995-03-17', 'anamartinez@email.com', 1);
+INSERT INTO clients (rut, name, surname, street, street_number, community, birthdate, email, complexity) VALUES ('20987652-7', 'Carlos', 'Reyes', 'PIRQUE', 300, 'Pirque', '1990-11-06', 'carlosreyes@email.com', 2);
+
 
 
 INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (100, '25345678-9', 5, 'Excelente servicio', '2023-08-20');
@@ -150,6 +271,44 @@ INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (715,
 INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (292, '21987654-8', 3, 'Servicio promedio, pero limpio', '2023-07-30');
 INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (653, '26458731-0', 5, 'Muy atentos y profesionales', '2023-09-20');
 INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (899, '21456378-3', 4, 'Cumplieron mis expectativas, gracias', '2023-08-25');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (100, '25345678-9', 5, 'Excelente servicio', '2011-04-15');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (200, '26983090-0', 4, 'Muy buen servicio', '2012-05-18');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (300, '27321459-1', 3, 'Buen servicio', '2013-08-22');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (400, '22098341-2', 2, 'Servicio regular', '2014-03-14');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (500, '9083942-3', 1, 'Mal servicio', '2015-10-09');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (437, '25483920-1', 5, 'Servicio excelente y muy profesional', '2016-11-21');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (821, '26789431-2', 4, 'Buen servicio', '2017-06-28');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (674, '19452345-6', 5, 'Me encantó el trato y la calidad', '2018-07-17');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (193, '22987456-7', 3, 'El servicio estuvo bien, pero podría mejorar', '2019-12-05');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (508, '21789453-8', 4, 'Muy buena atención, recomendado', '2020-04-16');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (364, '18976432-9', 5, 'Excelente resultado, volveré sin dudas', '2021-09-30');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (715, '27893412-0', 2, 'No cumplió con mis expectativas', '2022-11-08');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (292, '20678342-1', 4, 'Buena experiencia, muy detallistas', '2010-02-14');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (653, '23478965-4', 5, 'Increíble servicio, superó mis expectativas', '2011-07-19');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (899, '24897613-5', 3, 'El servicio fue aceptable', '2012-08-21');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (437, '28765432-1', 4, 'Atención amable y rápida', '2013-09-29');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (821, '19564321-7', 5, 'Todo impecable, volveré pronto', '2014-11-14');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (674, '26783214-9', 3, 'Bien, pero podrían mejorar algunos detalles', '2015-05-23');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (193, '20987654-2', 5, '¡Me encantó! Muy recomendable', '2016-03-11');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (508, '23476581-5', 4, 'Buena relación calidad-precio', '2017-12-20');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (364, '24367821-6', 2, 'No me gustó la atención', '2018-04-13');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (715, '27568312-4', 4, 'Excelente, aunque algo costoso', '2019-06-07');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (292, '21987654-8', 3, 'Servicio promedio, pero limpio', '2020-11-15');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (653, '26458731-0', 5, 'Muy atentos y profesionales', '2021-08-18');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (899, '21456378-3', 4, 'Cumplieron mis expectativas, gracias', '2022-10-23');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (100, '25345678-9', 5, 'Excelente servicio', '2010-12-05');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (200, '26983090-0', 4, 'Muy buen servicio', '2011-07-09');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (300, '27321459-1', 3, 'Buen servicio', '2012-09-18');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (400, '22098341-2', 2, 'Servicio regular', '2013-11-03');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (500, '9083942-3', 1, 'Mal servicio', '2014-10-14');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (437, '25483920-1', 5, 'Servicio excelente y muy profesional', '2015-01-25');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (821, '26789431-2', 4, 'Buen servicio', '2016-03-30');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (674, '19452345-6', 5, 'Me encantó el trato y la calidad', '2017-05-11');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (193, '22987456-7', 3, 'El servicio estuvo bien, pero podría mejorar', '2018-07-23');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (508, '21789453-8', 4, 'Muy buena atención, recomendado', '2019-09-10');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (364, '18976432-9', 5, 'Excelente resultado, volveré sin dudas', '2020-10-05');
+INSERT INTO reviews (service_code, client_rut, score, review, date) VALUES (715, '27893412-0', 2, 'No cumplió con mis expectativas', '2021-11-15');
+
 
 
 
@@ -158,6 +317,24 @@ INSERT INTO phones_clients (client_rut, phone) VALUES ('26983090-0', '250232090'
 INSERT INTO phones_clients (client_rut, phone) VALUES ('27321459-1', '210130941');
 INSERT INTO phones_clients (client_rut, phone) VALUES ('22098341-2', '278960939');
 INSERT INTO phones_clients (client_rut, phone) VALUES ('9083942-3', '239482411');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('25345678-9', '25502310');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('26983090-0', '250232090');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('27321459-1', '210130941');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('22098341-2', '278960939');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('9083942-3', '239482411');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('25483920-1', '293847562');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('26789431-2', '214365870');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('19452345-6', '213489075');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('22987456-7', '278965432');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('21789453-8', '293847165');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('18976432-9', '260938471');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('27893412-0', '289375614');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('20678342-1', '239084765');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('23478965-4', '278396451');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('24897613-5', '210394758');
+INSERT INTO phones_clients (client_rut, phone) VALUES ('28765432-1', '278349051');
+
+
 
 INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (1, '2023-01-09', '25345678-9', 5100);
 INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (2, '2021-06-02', '26983090-0', 5100);
@@ -189,6 +366,47 @@ INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (1
 INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (18, '2023-08-21', '21987654-8', 5400);
 INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (19, '2023-09-13', '26458731-0', 5400);
 INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (20, '2023-10-05', '21456378-3', 5800);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (1, '2010-03-15', '25345678-9', 5100);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (2, '2011-06-25', '26983090-0', 5100);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (3, '2012-08-14', '27321459-1', 5200);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (4, '2013-02-22', '22098341-2', 5200);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (5, '2014-05-19', '9083942-3', 5400);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (6, '2015-09-11', '25483920-1', 5100);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (7, '2016-04-07', '26789431-2', 5200);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (8, '2017-01-18', '19452345-6', 5300);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (9, '2018-03-29', '22987456-7', 5400);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (10, '2019-07-06', '21789453-8', 5500);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (11, '2020-05-04', '18976432-9', 5100);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (12, '2021-11-22', '27893412-0', 5200);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (13, '2022-09-12', '20678342-1', 5400);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (14, '2010-08-17', '23478965-4', 5400);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (15, '2011-04-25', '24897613-5', 5400);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (16, '2012-12-30', '28765432-1', 5100);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (17, '2013-06-21', '19564321-7', 5200);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (18, '2014-11-05', '26783214-9', 5800);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (19, '2015-03-13', '20987654-2', 5400);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (20, '2016-09-14', '23476581-5', 5600);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (21, '2017-07-09', '24367821-6', 5100);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (22, '2018-01-16', '27568312-4', 5200);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (23, '2019-10-21', '21987654-8', 5400);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (24, '2020-02-28', '26458731-0', 5400);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (25, '2021-05-05', '21456378-3', 5800);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (26, '2022-10-30', '25345678-9', 5100);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (27, '2010-12-15', '25483920-1', 5100);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (28, '2011-03-07', '26789431-2', 5200);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (29, '2012-09-20', '19452345-6', 5300);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (30, '2013-11-12', '22987456-7', 5400);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (31, '2014-04-28', '21789453-8', 5500);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (32, '2015-08-19', '18976432-9', 5100);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (33, '2016-05-30', '27893412-0', 5200);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (34, '2017-03-22', '20678342-1', 5400);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (35, '2018-09-17', '23478965-4', 5400);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (36, '2019-07-20', '24897613-5', 5400);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (37, '2020-05-11', '28765432-1', 5100);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (38, '2021-12-23', '19564321-7', 5200);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (39, '2022-11-02', '26783214-9', 5800);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (40, '2010-01-07', '20987654-2', 5400);
+
 
 
 INSERT INTO products (code, name, price, description) VALUES (100, 'Cera para barba', 5000, 'Cera para barba');
@@ -206,6 +424,28 @@ INSERT INTO products (code, name, price, description) VALUES (1200, 'Acondiciona
 INSERT INTO products (code, name, price, description) VALUES (1300, 'Aceite reparador', 8000, 'Aceite para reparar puntas abiertas y proteger el cabello');
 INSERT INTO products (code, name, price, description) VALUES (1400, 'Mascarilla capilar', 8500, 'Mascarilla para un cabello suave y brillante');
 INSERT INTO products (code, name, price, description) VALUES (1500, 'Spray fijador', 5000, 'Spray para fijar peinados de forma duradera');
+INSERT INTO products (code, name, price, description) VALUES (1600, 'Gel para peinar', 5500, 'Gel para peinar y fijar cabello');
+INSERT INTO products (code, name, price, description) VALUES (1700, 'Cera moldeadora', 6000, 'Cera para modelar el cabello');
+INSERT INTO products (code, name, price, description) VALUES (1800, 'Serum capilar', 9000, 'Serum nutritivo para el cabello');
+INSERT INTO products (code, name, price, description) VALUES (1900, 'Crema de peinar', 4500, 'Crema para peinar y desenredar');
+INSERT INTO products (code, name, price, description) VALUES (2000, 'Mascarilla de hidratación profunda', 10000, 'Mascarilla intensa para cabello seco');
+INSERT INTO products (code, name, price, description) VALUES (2100, 'Espuma voluminizadora', 7000, 'Espuma para dar volumen al cabello');
+INSERT INTO products (code, name, price, description) VALUES (2200, 'Mousse para rizar', 6500, 'Mousse para definir rizos');
+INSERT INTO products (code, name, price, description) VALUES (2300, 'Crema anti-frizz', 5500, 'Crema para controlar el frizz');
+INSERT INTO products (code, name, price, description) VALUES (2400, 'Gel fijador', 4000, 'Gel para fijar el peinado');
+INSERT INTO products (code, name, price, description) VALUES (2500, 'Espuma fijadora', 5000, 'Espuma para fijar el peinado');
+INSERT INTO products (code, name, price, description) VALUES (2600, 'Cera mate', 6000, 'Cera para un acabado mate en el peinado');
+INSERT INTO products (code, name, price, description) VALUES (2700, 'Serum brillo', 8500, 'Serum para dar brillo al cabello');
+INSERT INTO products (code, name, price, description) VALUES (2800, 'Crema de definición', 7000, 'Crema para definir rizos y ondas');
+INSERT INTO products (code, name, price, description) VALUES (2900, 'Acondicionador sin enjuague', 6000, 'Acondicionador que no necesita enjuague');
+INSERT INTO products (code, name, price, description) VALUES (3000, 'Spray protector térmico', 7500, 'Spray para proteger el cabello del calor');
+INSERT INTO products (code, name, price, description) VALUES (3100, 'Cera de peinado', 5000, 'Cera para moldear el cabello con acabado natural');
+INSERT INTO products (code, name, price, description) VALUES (3200, 'Cera brillo', 7000, 'Cera para un peinado brillante');
+INSERT INTO products (code, name, price, description) VALUES (3300, 'Bálsamo de reparación capilar', 8000, 'Bálsamo para reparar el cabello dañado');
+INSERT INTO products (code, name, price, description) VALUES (3400, 'Mascarilla de proteínas', 9000, 'Mascarilla para fortalecer el cabello con proteínas');
+INSERT INTO products (code, name, price, description) VALUES (3500, 'Aceite nutritivo', 8500, 'Aceite para nutrir y suavizar el cabello');
+
+
 
 INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (1, 100, 2, 0);
 INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (1, 200, 1, 300);
@@ -236,6 +476,46 @@ INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (10
 INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (10, 1100, 3, 0);
 INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (10, 700, 1, 0);
 INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (10, 500, 5, 300);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (1, 100, 2, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (1, 200, 1, 300);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (1, 1100, 3, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (2, 300, 4, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (2, 400, 2, 200);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (2, 500, 1, 300);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (2, 1200, 1, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (3, 600, 3, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (3, 700, 2, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (4, 400, 5, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (4, 700, 2, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (4, 800, 1, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (5, 100, 3, 100);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (5, 1100, 4, 100);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (6, 300, 1, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (6, 400, 3, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (6, 1200, 2, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (7, 500, 4, 100);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (7, 600, 1, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (7, 700, 3, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (8, 800, 2, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (8, 1100, 3, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (9, 700, 1, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (9, 500, 5, 100);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (9, 600, 2, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (10, 800, 2, 200);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (10, 1100, 3, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (10, 700, 1, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (10, 500, 5, 300);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (11, 1300, 3, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (11, 1400, 2, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (12, 1500, 1, 100);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (12, 1600, 2, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (13, 1700, 3, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (13, 1800, 1, 200);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (14, 1900, 2, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (14, 2000, 4, 300);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (15, 2100, 1, 0);
+INSERT INTO sales_in (number_voucher, product_code, number, discount) VALUES (15, 2200, 2, 0);
+
 
 
 INSERT INTO sells (shop_id, product_code, stock) VALUES (5100, 100, 10);
@@ -266,6 +546,8 @@ INSERT INTO sells (shop_id, product_code, stock) VALUES (5800, 600, 35);
 INSERT INTO sells (shop_id, product_code, stock) VALUES (5800, 700, 20);
 INSERT INTO sells (shop_id, product_code, stock) VALUES (5800, 800, 15);
 
+
+
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (1, '2023-08-20 09:00', 'Completed', '25345678-9', 5100);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (2, '2021-02-17 11:00', 'Completed', '26983090-0', 5100);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (3, '2024-01-01 13:00', 'Completed', '27321459-1', 5200);
@@ -282,6 +564,47 @@ INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (7, '2023-
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (8, '2023-08-27 15:00', 'Cancelled', '20678342-1', 5300);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (9, '2023-08-28 17:30', 'Completed', '23478965-4', 5400);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (10, '2023-08-29 18:00', 'Pending', '24897613-5', 5600);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (1, '2024-01-15 09:00', 'Completed', '25345678-9', 5100);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (2, '2021-05-17 11:00', 'Completed', '26983090-0', 5100);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (3, '2019-02-01 13:00', 'Completed', '27321459-1', 5200);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (4, '2020-03-01 14:00', 'Completed', '22098341-2', 5200);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (5, '2021-01-03 15:00', 'Completed', '9083942-3', 5400);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (6, '2024-02-23 12:00', 'Completed', '25483920-1', 5100);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (7, '2024-03-15 14:00', 'Completed', '26789431-2', 5200);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (8, '2022-01-22 11:30', 'Cancelled', '19452345-6', 5300);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (9, '2024-04-23 16:00', 'Completed', '22987456-7', 5400);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (10, '2018-05-24 10:00', 'Pending', '21789453-8', 5400);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (11, '2017-06-25 09:00', 'Completed', '18976432-9', 5100);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (12, '2019-07-26 13:00', 'Completed', '27893412-0', 5200);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (13, '2016-08-27 15:00', 'Cancelled', '20678342-1', 5300);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (14, '2020-09-28 17:30', 'Completed', '23478965-4', 5400);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (15, '2024-10-29 18:00', 'Pending', '24897613-5', 5600);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (16, '2019-04-20 09:00', 'Completed', '28765432-1', 5100);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (17, '2010-02-21 11:00', 'Completed', '19564321-7', 5200);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (18, '2012-05-22 13:00', 'Cancelled', '26783214-9', 5300);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (19, '2014-08-23 14:00', 'Completed', '20987654-2', 5400);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (20, '2011-01-24 15:00', 'Completed', '23476581-5', 5600);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (21, '2024-02-15 09:00', 'Cancelled', '24367821-6', 5300);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (22, '2010-05-16 11:00', 'Completed', '27568312-4', 5100);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (23, '2018-06-17 13:00', 'Completed', '21987654-8', 5200);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (24, '2011-07-18 14:00', 'Pending', '26458731-0', 5400);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (25, '2024-08-19 15:00', 'Completed', '21456378-3', 5400);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (26, '2014-09-20 12:00', 'Completed', '25345678-9', 5100);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (27, '2017-10-21 11:00', 'Completed', '26983090-0', 5100);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (28, '2020-11-22 14:00', 'Completed', '27321459-1', 5200);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (29, '2015-02-23 15:00', 'Completed', '22098341-2', 5200);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (30, '2012-03-24 09:00', 'Completed', '9083942-3', 5400);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (31, '2013-04-25 11:00', 'Cancelled', '25483920-1', 5300);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (32, '2016-05-26 13:00', 'Completed', '26789431-2', 5200);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (33, '2018-06-27 14:00', 'Completed', '19452345-6', 5300);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (34, '2017-07-28 15:00', 'Pending', '22987456-7', 5400);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (35, '2011-08-29 09:00', 'Completed', '21789453-8', 5100);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (36, '2012-02-20 11:00', 'Completed', '18976432-9', 5200);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (37, '2014-05-21 13:00', 'Cancelled', '27893412-0', 5300);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (38, '2020-06-22 14:00', 'Completed', '20678342-1', 5200);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (39, '2016-07-23 15:00', 'Pending', '23478965-4', 5400);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (40, '2019-08-24 09:00', 'Completed', '24897613-5', 5600);
+
 
 
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (1, 100, '25345678-9');
@@ -292,16 +615,59 @@ INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (3, 300, '
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (4, 200, '27321459-1');
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (5, 500, '9083942-3');
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (6, 500, '27321459-1');
-INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (1, 437, '25345678-9'); -- Pedro Vargas, Barbero, Shop 5100
-INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (2, 821, '26983090-0'); -- Victor Diaz, Barbero, Shop 5200
-INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (3, 674, '27321459-1'); -- Pablo Lopez, Estilista, Shop 5100
-INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (4, 193, '22098341-2'); -- Felipe Jara, Estilista, Shop 5400
-INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (5, 508, '9083942-3'); -- Miguel Alvarez, Barbero, Shop 5400
-INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (6, 364, '25345678-9'); -- Pedro Vargas, Barbero, Shop 5100
-INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (7, 715, '26983090-0'); -- Victor Diaz, Barbero, Shop 5200
-INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (8, 292, '12849342-3'); -- Manuel Alvarez, Gerente, Shop 5600
-INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (9, 653, '22098341-2'); -- Felipe Jara, Estilista, Shop 5400
-INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (10, 899, '9083942-3'); -- Miguel Alvarez, Barbero, Shop 5400
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (1, 437, '25345678-9'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (2, 821, '26983090-0'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (3, 674, '27321459-1'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (4, 193, '22098341-2'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (5, 508, '9083942-3'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (6, 364, '25345678-9'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (7, 715, '26983090-0'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (8, 292, '12849342-3'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (9, 653, '22098341-2'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (10, 899, '9083942-3'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (1, 100, '25345678-9');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (1, 200, '25345678-9');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (2, 200, '22098341-2');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (2, 400, '22098341-2');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (3, 300, '22098341-2');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (4, 200, '27321459-1');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (5, 500, '9083942-3');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (6, 500, '27321459-1');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (7, 437, '25345678-9'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (8, 821, '26983090-0'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (9, 674, '27321459-1'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (10, 193, '22098341-2'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (11, 508, '9083942-3'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (12, 364, '25345678-9'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (13, 715, '26983090-0'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (14, 292, '20678342-1'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (15, 653, '23478965-4'); 
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (16, 899, '24897613-5');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (17, 100, '28765432-1');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (18, 200, '19564321-7');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (19, 400, '26783214-9');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (20, 500, '20987654-2');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (21, 1200, '23476581-5');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (22, 1300, '24367821-6');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (23, 1400, '27568312-4');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (24, 1500, '21987654-8');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (25, 1600, '26458731-0');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (26, 1700, '21456378-3');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (27, 1800, '25345678-9');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (28, 1900, '26983090-0');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (29, 2000, '27321459-1');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (30, 2100, '22098341-2');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (31, 2200, '9083942-3');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (32, 2300, '25483920-1');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (33, 2400, '26789431-2');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (34, 2500, '19452345-6');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (35, 2600, '22987456-7');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (36, 2700, '21789453-8');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (37, 2800, '18976432-9');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (38, 2900, '27893412-0');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (39, 3000, '20678342-1');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (40, 3100, '23478965-4');
+
 
 INSERT INTO payment_documents (document_number, booking_code) VALUES (1, 1);
 INSERT INTO payment_documents (document_number, booking_code) VALUES (2, 2);
@@ -319,6 +685,47 @@ INSERT INTO payment_documents (document_number, booking_code) VALUES (7, 7);
 INSERT INTO payment_documents (document_number, booking_code) VALUES (8, 8);
 INSERT INTO payment_documents (document_number, booking_code) VALUES (9, 9);
 INSERT INTO payment_documents (document_number, booking_code) VALUES (10, 10);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (1, 1);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (2, 2);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (3, 3);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (4, 4);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (5, 5);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (6, 6);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (7, 7);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (8, 8);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (9, 9);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (10, 10);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (11, 11);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (12, 12);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (13, 13);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (14, 14);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (15, 15);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (16, 16);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (17, 17);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (18, 18);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (19, 19);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (20, 20);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (21, 21);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (22, 22);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (23, 23);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (24, 24);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (25, 25);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (26, 26);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (27, 27);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (28, 28);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (29, 29);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (30, 30);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (31, 31);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (32, 32);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (33, 33);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (34, 34);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (35, 35);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (36, 36);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (37, 37);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (38, 38);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (39, 39);
+INSERT INTO payment_documents (document_number, booking_code) VALUES (40, 40);
+
 
 
 INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (1, 0.10, '2023-08-20');
@@ -326,6 +733,54 @@ INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (2, 0.20,
 INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (3, 0.25, '2024-01-01');
 INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (4, 0.05, '2025-03-01');
 INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (5, 0.15, '2024-12-03');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (1, 0.10, '2023-08-20');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (2, 0.20, '2024-02-17');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (3, 0.25, '2024-01-01');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (4, 0.05, '2025-03-01');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (5, 0.15, '2024-12-03');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (6, 0.30, '2023-05-15');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (7, 0.35, '2023-09-10');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (8, 0.40, '2024-04-20');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (9, 0.50, '2025-02-01');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (10, 0.45, '2023-07-25');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (11, 0.60, '2024-05-19');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (12, 0.55, '2023-11-30');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (13, 0.05, '2023-06-21');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (14, 0.15, '2025-08-11');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (15, 0.25, '2024-10-14');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (16, 0.20, '2023-02-17');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (17, 0.10, '2024-03-09');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (18, 0.30, '2024-07-15');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (19, 0.35, '2025-06-01');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (20, 0.40, '2023-12-11');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (21, 0.50, '2023-09-19');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (22, 0.60, '2024-11-05');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (23, 0.45, '2025-01-30');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (24, 0.55, '2024-08-22');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (25, 0.15, '2023-03-18');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (26, 0.10, '2024-05-20');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (27, 0.20, '2023-11-23');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (28, 0.25, '2024-01-05');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (29, 0.30, '2025-02-27');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (30, 0.05, '2024-09-06');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (31, 0.35, '2023-10-31');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (32, 0.40, '2024-06-12');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (33, 0.50, '2023-04-17');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (34, 0.45, '2023-07-01');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (35, 0.60, '2024-12-18');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (36, 0.55, '2025-05-13');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (37, 0.05, '2024-03-22');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (38, 0.15, '2025-10-09');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (39, 0.20, '2023-02-28');
+INSERT INTO discounts_codes (code, percentage, expiration_date) VALUES (40, 0.25, '2024-04-05');
+
+
 
 INSERT INTO discounts (code_discount, payment_document_number, mount) VALUES (1, 1, 1000);
 INSERT INTO discounts (code_discount, payment_document_number, mount) VALUES (2, 2, 2000);
+INSERT INTO discounts (code_discount, payment_document_number, mount) VALUES (3, 3, 2500);
+INSERT INTO discounts (code_discount, payment_document_number, mount) VALUES (4, 4, 500);
+INSERT INTO discounts (code_discount, payment_document_number, mount) VALUES (5, 5, 1500);
+INSERT INTO discounts (code_discount, payment_document_number, mount) VALUES (6, 6, 3000);
+INSERT INTO discounts (code_discount, payment_document_number, mount) VALUES (7, 8, 1000);
+INSERT INTO discounts (code_discount, payment_document_number, mount) VALUES (7, 8, 2000);
