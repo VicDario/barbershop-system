@@ -162,39 +162,29 @@ INSERT INTO combos (combo_number, price) VALUES (7, 50000);
 INSERT INTO combos (combo_number, price) VALUES (8, 55000);
 INSERT INTO combos (combo_number, price) VALUES (9, 60000);
 INSERT INTO combos (combo_number, price) VALUES (10, 65000);
-INSERT INTO combos (combo_number, price) VALUES (11, 70000);
-INSERT INTO combos (combo_number, price) VALUES (12, 75000);
-INSERT INTO combos (combo_number, price) VALUES (13, 80000);
-INSERT INTO combos (combo_number, price) VALUES (14, 85000);
-INSERT INTO combos (combo_number, price) VALUES (15, 90000);
-INSERT INTO combos (combo_number, price) VALUES (16, 95000);
-INSERT INTO combos (combo_number, price) VALUES (17, 100000);
-INSERT INTO combos (combo_number, price) VALUES (18, 105000);
-INSERT INTO combos (combo_number, price) VALUES (19, 110000);
-INSERT INTO combos (combo_number, price) VALUES (20, 115000);
 
 
 
 INSERT INTO offer_in (combo_number, service_code) VALUES (1, 100);
-INSERT INTO offer_in (combo_number, service_code) VALUES (2, 200);
-INSERT INTO offer_in (combo_number, service_code) VALUES (3, 300);
-INSERT INTO offer_in (combo_number, service_code) VALUES (4, 400);
-INSERT INTO offer_in (combo_number, service_code) VALUES (5, 500);
-INSERT INTO offer_in (combo_number, service_code) VALUES (6, 600);
-INSERT INTO offer_in (combo_number, service_code) VALUES (7, 700);
-INSERT INTO offer_in (combo_number, service_code) VALUES (8, 800);
-INSERT INTO offer_in (combo_number, service_code) VALUES (9, 900);
-INSERT INTO offer_in (combo_number, service_code) VALUES (10, 1000);
-INSERT INTO offer_in (combo_number, service_code) VALUES (11, 1100);
-INSERT INTO offer_in (combo_number, service_code) VALUES (12, 1200);
-INSERT INTO offer_in (combo_number, service_code) VALUES (13, 1300);
-INSERT INTO offer_in (combo_number, service_code) VALUES (14, 1400);
-INSERT INTO offer_in (combo_number, service_code) VALUES (15, 1500);
-INSERT INTO offer_in (combo_number, service_code) VALUES (16, 1600);
-INSERT INTO offer_in (combo_number, service_code) VALUES (17, 1700);
-INSERT INTO offer_in (combo_number, service_code) VALUES (18, 1800);
-INSERT INTO offer_in (combo_number, service_code) VALUES (19, 1900);
-INSERT INTO offer_in (combo_number, service_code) VALUES (20, 2000);
+INSERT INTO offer_in (combo_number, service_code) VALUES (1, 200);
+INSERT INTO offer_in (combo_number, service_code) VALUES (2, 300);
+INSERT INTO offer_in (combo_number, service_code) VALUES (2, 400);
+INSERT INTO offer_in (combo_number, service_code) VALUES (3, 500);
+INSERT INTO offer_in (combo_number, service_code) VALUES (3, 600);
+INSERT INTO offer_in (combo_number, service_code) VALUES (4, 700);
+INSERT INTO offer_in (combo_number, service_code) VALUES (4, 800);
+INSERT INTO offer_in (combo_number, service_code) VALUES (5, 900);
+INSERT INTO offer_in (combo_number, service_code) VALUES (5, 1000);
+INSERT INTO offer_in (combo_number, service_code) VALUES (6, 1100);
+INSERT INTO offer_in (combo_number, service_code) VALUES (6, 1200);
+INSERT INTO offer_in (combo_number, service_code) VALUES (7, 1300);
+INSERT INTO offer_in (combo_number, service_code) VALUES (7, 1400);
+INSERT INTO offer_in (combo_number, service_code) VALUES (8, 1500);
+INSERT INTO offer_in (combo_number, service_code) VALUES (8, 1600);
+INSERT INTO offer_in (combo_number, service_code) VALUES (9, 1700);
+INSERT INTO offer_in (combo_number, service_code) VALUES (9, 1800);
+INSERT INTO offer_in (combo_number, service_code) VALUES (10, 1900);
+INSERT INTO offer_in (combo_number, service_code) VALUES (10, 2000);
 
 
 
