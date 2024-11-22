@@ -63,7 +63,7 @@ CREATE TABLE certificates_employees (
 
 CREATE TABLE services (
     code INTEGER PRIMARY KEY NOT NULL,
-    name VARCHAR(20) NOT NULL,
+    name VARCHAR(30) NOT NULL,
     base_price FLOAT NOT NULL
 );
 
