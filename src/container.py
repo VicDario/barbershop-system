@@ -6,8 +6,8 @@ from .presentation.menu import Menu
 from .infrastructure.repositories.shop_repository import ShopRepository
 from .infrastructure.repositories.profit_repository import ProfitRepository
 from .infrastructure.repositories.voucher_repository import VoucherRepository
-from .infrastructure.repositories.daily_clients_attended import DailyClientsAttendedRepository
-from .infrastructure.repositories.daily_bookings_attended_by_worker import DailyBookingForEmployeesRepository
+from .infrastructure.repositories.client_repository import ClientRepository
+from .infrastructure.repositories.booking_repository import BookingRepository
 
 from .infrastructure.use_cases.profits_between_years_usecase import ProfitsBetweenYearsUseCase
 from .infrastructure.use_cases.lastyear_profits_usecase import LastYearProfitsUseCase
@@ -37,14 +37,14 @@ class Container(containers.DeclarativeContainer):
     shop_repository = providers.Singleton(ShopRepository, db=postgre_database)
     profit_repository = providers.Singleton(ProfitRepository, db=postgre_database)
     voucher_repository = providers.Singleton(VoucherRepository, db=postgre_database)
-    daily_client_repository = providers.Singleton(DailyClientsAttendedRepository, db=postgre_database)
-    daily_bookings_attended_by_worker = providers.Singleton(DailyBookingForEmployeesRepository, db=postgre_database)
+    client_repository = providers.Singleton(ClientRepository, db=postgre_database)
+    booking_repository = providers.Singleton(BookingRepository, db=postgre_database)
 
     lastyear_profits_usecase = providers.Singleton(LastYearProfitsUseCase, profit_repository=profit_repository)
     profits_between_years_usecase = providers.Singleton(ProfitsBetweenYearsUseCase, profit_repository=profit_repository)
     show_sales_vouchers_by_shops_usecase = providers.Singleton(ShowSalesVouchersByShop, voucher_repository=voucher_repository)
-    daily_client_usecase = providers.Singleton(DailyClientsAttendedUseCase, daily_client_repository=daily_client_repository)
-    daily_bookings_attended_usecase = providers.Singleton(DailyBookingsAttendedByWorkerUseCase, daily_bookings_attended_by_worker=daily_bookings_attended_by_worker)
+    daily_client_usecase = providers.Singleton(DailyClientsAttendedUseCase, client_repository=client_repository)
+    daily_bookings_attended_usecase = providers.Singleton(DailyBookingsAttendedByWorkerUseCase, booking_repository=booking_repository)
     generate_chart_usecase = providers.Singleton(GenerateChartUseCase, profit_repository=profit_repository)
     
     menu = providers.Factory(
