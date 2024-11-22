@@ -14,8 +14,8 @@ class DailyClientsAttendedRepository():
         b.code AS booking_code, 
         b.shop_id AS shop_id
     FROM bookings b
-    JOIN clients c ON c.rut = b.clients_rut
-    JOIN attends a ON b.code = a.booking_code
+    JOIN clients c ON c.rut = c.rut
+    JOIN attends a ON b.code = booking_code
     GROUP by date, c.rut, b.code, b.shop_id
     ORDER BY date;                            
                                  

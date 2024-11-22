@@ -68,7 +68,7 @@ class Menu:
         self.show_sales_vouchers_by_shops_usecase.execute()
         
     def option_four(self):
-        self.daily_clients_usecase.execute()
+        self.daily_client_usecase.execute()
         
     def option_five(self):
         self.daily_bookings_attended_usecase.execute()
