@@ -19,7 +19,6 @@ class GenerateChartUseCase:
             autopct='%1.1f%%',
             startangle=140,
             textprops={'fontsize': 10},
-
         )
         plt.title(f"Ventas totales por servicio ({year})", fontsize=20,  y=1.05)
         plt.axis('equal')
