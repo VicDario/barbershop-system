@@ -404,7 +404,7 @@ INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (4
 INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (43, '2022-08-14', '16203606-1', 5200);
 INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (44, '2023-02-22', '21588341-2', 5200);
 INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (45, '2024-05-19', '14788959-3', 5400);
-INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (46, '2019-09-11', '25483920-1', 5100);
+INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (46, '2020-09-11', '25483920-1', 5100);
 INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (47, '2020-04-07', '26789431-2', 5200);
 INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (48, '2024-01-18', '19452345-6', 5100);
 INSERT INTO sales_vouchers (number_voucher, date, client_rut, shop_id) VALUES (49, '2023-03-29', '22987456-7', 5400);
@@ -738,7 +738,7 @@ INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (3, '2024-
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (4, '2022-03-01 14:00', 'Completed', '21588341-2', 5200);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (5, '2021-12-03 15:00', 'Completed', '14788959-3', 5400);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (6, '2024-03-23 12:00', 'Completed', '16203606-1', 5100);
-INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (7, '2023-08-26 13:00', 'Completed', '27893412-0', 5800);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (7, '2021-07-26 13:00', 'Completed', '27893412-0', 5800);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (8, '2023-08-27 15:00', 'Cancelled', '20678342-1', 5600);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (9, '2023-08-28 17:30', 'Completed', '23478965-4', 5400);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (10, '2023-08-29 18:00', 'Pending', '24897613-5', 5600);
@@ -761,14 +761,14 @@ INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (26, '2024
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (27, '2020-10-21 11:00', 'Completed', '8665981-0', 5100);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (28, '2020-11-22 14:00', 'Completed', '16203606-1', 5200);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (29, '2024-02-23 15:00', 'Completed', '21588341-2', 5800);
-INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (30, '2022-03-24 09:00', 'Completed', '14788959-3', 5600);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (30, '2021-12-03 09:00', 'Completed', '14788959-3', 5600);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (31, '2023-04-25 11:00', 'Cancelled', '25483920-1', 5800);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (32, '2023-05-26 13:00', 'Completed', '26789431-2', 5200);
-INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (33, '2018-08-27 14:00', 'Completed', '19452345-6', 5800);
-INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (34, '2023-07-28 15:00', 'Pending', '22987456-7', 5400);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (33, '2020-08-27 14:00', 'Completed', '19452345-6', 5800);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (34, '2020-08-27 15:00', 'Completed', '22987456-7', 5800);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (35, '2021-08-29 09:00', 'Completed', '21789453-8', 5100);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (36, '2022-02-20 11:00', 'Completed', '18976432-9', 5200);
-INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (37, '2024-05-21 13:00', 'Cancelled', '27893412-0', 5800);
+INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (37, '2021-07-26 13:00', 'Cancelled', '27893412-0', 5800);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (38, '2020-06-22 14:00', 'Completed', '20678342-1', 5200);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (39, '2023-07-23 15:00', 'Pending', '23478965-4', 5400);
 INSERT INTO bookings (code, date, status, client_rut, shop_id) VALUES (40, '2022-08-24 09:00', 'Completed', '24897613-5', 5600);
@@ -834,7 +834,7 @@ INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (31, 600, 
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (32, 1200, '26983090-0');
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (33, 1200, '27321459-1');
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (33, 800, '27321459-1');
-INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (34, 2000, '9483452-3');
+INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (34, 2000, '27321459-1');
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (35, 1100, '25345678-9');
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (36, 1100, '26483590-6');
 INSERT INTO attends (booking_code, service_code, employee_rut) VALUES (36, 1400, '26483590-6');
